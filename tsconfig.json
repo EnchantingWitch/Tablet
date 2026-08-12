@@ -1,0 +1,17 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "paths": {
+      "@/*": [
+        "./*"
+      ]
+    }
+  },
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+, "app/_DB/database/schema.js", "app/_DB/model/System.js", "app/_DB/model/Subobject.js", "app/_DB/model/Organisation.js", "app/_DB/model/Object.js", "app/_DB/model/Note.js", "app/_DB/model/Defact.js", "app/_DB/model/index.ts", "app/_DB/model/index.js", "app/_DB/database/index.js"  ]
+}
