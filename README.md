@@ -1,50 +1,73 @@
-# Welcome to your Expo app 👋
+# Планшет ПНР (pr4-WM)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Мобильное планшетное приложение для сопровождения **пусконаладочных работ (ПНР)** на объектах капитального строительства (ОКС). Полевой инструмент для исполнителей и супервайзеров: ведение замечаний и дефектов, журнал работ, структура систем объекта, документация, KPI-дашборд, а также **офлайн-режим** для работы без связи.
 
-## Get started
+Подробное описание архитектуры — в [docs/ARCHITECTURE.md](./docs/ARCHITECTURE.md).
 
-1. Install dependencies
+## Стек
 
-   ```bash
-   npm install
-   ```
+- **Expo SDK 53** + **React Native 0.79.5** + **React 19** (New Architecture)
+- **Expo Router ~5.1** (file-based навигация, typed routes)
+- **TypeScript** (strict, алиас `@/*`)
+- **WatermelonDB** (SQLite) — локальная БД офлайн-режима
+- **expo-secure-store** — токены/права, **EAS Build** — сборка (Android)
 
-2. Start the app
+## Требования
 
-   ```bash
-   npx expo start
-   ```
+- Node.js 18+ (рекомендуется 20 LTS)
+- JDK 17 и Android SDK (для нативной сборки Android)
+- EAS CLI: `npm install -g eas-cli`
+- Устройство/эмулятор Android
 
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Установка
 
 ```bash
-npm run reset-project
+npm install
+# или, при использовании bun:
+# bun install
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Запуск (разработка)
 
-## Learn more
+```bash
+npm start         # expo start
+npm run android   # запуск на Android-устройстве/эмуляторе
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+Для разработки используется **development build** (не Expo Go) — приложение задействует нативные модули (`react-native-fs`, `watermelondb` и др.):
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+```bash
+npm run build:dev   # обл. сборка development-клиента (EAS)
+# или локально: npm run build:dev:local
+```
 
-## Join the community
+## Сборка (EAS Build, Android)
 
-Join our community of developers creating universal apps.
+| Профиль | Назначение | Команда |
+|---|---|---|
+| `development` | Dev-клиент для отладки | `npm run build:dev` |
+| `preview` | Внутреннее тестирование | `npm run build:preview` |
+| `production` | Релиз (APK, `autoIncrement`) | `npm run build:prod` |
+| `production-aab` | Релиз (AAB для сторов) | `npm run build:prod:aab` |
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Варианты `:local` собирают на вашей машине без облака.
+
+## Конфигурация окружения
+
+URL бэкенда задаётся в [`config/api.js`](./config/api.js) по окружениям:
+
+- `development` (при `__DEV__`) и `preview` (релизные сборки по умолчанию) → тестовый сервер;
+- `production` — прод-сервер.
+
+> ⚠️ **Важно:** текущая логика выбора окружения (`__DEV__` → development, иначе preview) **никогда не возвращает `production`** — релизные сборки уходят на тестовый сервер. Это известная проблема (см. [ARCHITECTURE.md §10.1](./docs/ARCHITECTURE.md)). Перед настоящим релизом требуется исправить переключение окружений.
+
+## Структура проекта
+
+Кратко: `app/` — маршруты Expo Router (онлайн-дерево + параллельное `app/offline/`), `components/` — UI, `providers/` — Context авторизации, `hooks/` — кастомные хуки, `DB/` — WatermelonDB (схема, модели, миграции), `config/api.js` — бэкенд, `android/` — нативный проект. Полная карта — в [ARCHITECTURE.md](./docs/ARCHITECTURE.md).
+
+## Ресурсы
+
+- [Архитектура проекта](./docs/ARCHITECTURE.md)
+- [Документация Expo](https://docs.expo.dev/)
+- [EAS Build](https://docs.expo.dev/build/introduction/)
+- [Expo Router](https://docs.expo.dev/router/introduction/)
