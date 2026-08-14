@@ -1,12 +1,12 @@
 const ENVIRONMENTS = {
   production: {
-    baseUrl: 'https://xn----7sbpwlcifkq8d.xn--p1ai:8441',
+    baseUrl: 'https://10.5.6.15:8443', // продуктовый сервер
   },
   preview: {
-    baseUrl: 'https://pnr-tablet-test.ru:8443',//'https://xn----7sbpwlcifkq8d.xn--p1ai:8443', 
+    baseUrl: 'https://10.5.6.17:8443', // тестовый сервер
   },
   development: {
-    baseUrl: 'https://pnr-tablet-test.ru:8443', // или ваш dev сервер
+    baseUrl: 'https://10.5.6.17:8443', // тестовый сервер
   }
 };
 
