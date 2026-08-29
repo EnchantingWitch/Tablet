@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import React, { useState } from 'react';
 import { View, Text, TouchableOpacity, StyleSheet, TextInput, Alert, Image } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -66,7 +67,7 @@ const styles = StyleSheet.create({
     input: {
         width: '100%',
         height: 40,
-        borderColor: '#ccc',
+        borderColor: brand.bgBlue,
         borderWidth: 1,
         borderRadius: 5,
         padding: 10,
@@ -77,7 +78,7 @@ const styles = StyleSheet.create({
     },
     placeholder: {
         fontSize: 16,
-        color: '#888',
+        color: brand.gray,
     },
 });
 

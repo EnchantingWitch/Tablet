@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import CustomButton from "@/components/CustomButton";
 import { useColorBlue, useColorGray, useColorText } from '@/hooks/useColorText';
 import { useToken } from "@/hooks/useToken";
@@ -107,6 +108,7 @@ const LoginModal = () => {
       //data.append('name', 'Image Upload');
       body.append("username", name)
       body.append("password", password)
+      console.log(`${API_BASE_URL}/login`)
       let response = await fetch(
         `${API_BASE_URL}/login`,
         {
@@ -134,22 +136,21 @@ const LoginModal = () => {
       console.log("ResponseSignIn:", response);
       const token = await response.json();
       console.log(token);
-      console.log(token.accessToken);
-      console.log(token.refreshToken);
       if (response.ok) {
         setAccessToken(token.accessToken);
         setRefreshToken(token.refreshToken);
         saveToken("refreshToken", token.refreshToken, setSavedRefreshToken);
         saveToken("accessToken", token.accessToken, setSavedToken);
+      } else {
+        // Неверные почта/пароль или ошибка сервера — разблокируем кнопки и показываем причину
+        setDisabled(false);
+        setErrorMessage(token.message || "Проверьте корректность введенных почты и пароля.");
       }
     } catch (error) {
-      
-     /* console.error("Error:", error);
-       Alert.alert('', 'Произошла ошибка при авторизации: ' + error, [
-                   {text: 'OK', onPress: () => console.log('OK Pressed')},
-                ])*/
+      setErrorMessage("Не удалось подключиться к серверу. Проверьте сеть.");
       setDisabled(false);
     } finally {
+      setDisabled(false);
     }
   };
 
@@ -279,7 +280,6 @@ return (
           <CustomButton title="Войти" handlePress={handleLogin} />
         )}
         <CustomButton
-          disabled={disabled}
           title="Зарегистрироваться"
           handlePress={() => router.push("/sign/register")}
         />
@@ -325,14 +325,14 @@ const styles = StyleSheet.create({
     marginBottom: 30,
   },
   input: {
-    backgroundColor: "#FFFFFF",
+    backgroundColor: brand.white,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: "#D9D9D9",
+    borderColor: brand.bgBlue,
     width: "91%",
     height: 42,
     paddingVertical: "auto",
-    color: "#B3B3B3",
+    color: brand.bgBlue,
     textAlign: "center",
     marginBottom: 20,
   },

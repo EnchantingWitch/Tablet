@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { useColorBlue, useColorGray, useColorSkyBlueCarpet, useColorText } from '@/hooks/useColorText';
 import React, { useEffect, useState } from 'react';
 import { StyleSheet, useWindowDimensions, View } from 'react-native';
@@ -96,7 +97,7 @@ const styles = StyleSheet.create({
     },
     dropdown: {
         height: 37,
-        borderColor: '#E0F2FE',
+        borderColor: brand.bgBlueLight,
         borderWidth: 2,
         borderRadius: 8,
         paddingHorizontal: 8,
@@ -119,13 +120,13 @@ const styles = StyleSheet.create({
     placeholderStyle: {
        // fontSize: 16,
        textAlign: 'center',
-       //color: '#B3B3B3',
+       //color: brand.bgBlue,
       
     },
     selectedTextStyle: {
         //fontSize: 16,
         textAlign: 'center',
-       // color: '#B3B3B3',
+       // color: brand.bgBlue,
        
     },
     iconStyle: {
@@ -135,7 +136,7 @@ const styles = StyleSheet.create({
     inputSearchStyle: {
         height: 37,
         borderRadius: 8,
-        color: '#B2B3B3'
+        color: brand.bgBlue
        // fontSize: 16,
     },
 });

@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { useColorBlue, useColorGray, useColorText } from '@/hooks/useColorText';
 import { Ionicons } from '@expo/vector-icons';
 import React, { forwardRef, useEffect, useRef, useState } from 'react';
@@ -238,16 +239,16 @@ const styles = StyleSheet.create({
     },
     dropdown: {
         height: 42,
-        borderColor: '#D9D9D9',
+        borderColor: brand.bgBlue,
         borderWidth: 1,
         borderRadius: 8,
         paddingHorizontal: 8,
         alignItems: 'center',
-        backgroundColor: '#fff',
+        backgroundColor: brand.white,
         justifyContent: 'center',
     },
     selectedTextStyle: {
-        color: '#B3B3B3',
+        color: brand.bgBlue,
         textAlign: 'left',
     },
     modalOverlay: {
@@ -265,7 +266,7 @@ const styles = StyleSheet.create({
     dropdownItem: {
         paddingVertical: 12,
         borderBottomWidth: 1,
-        borderBottomColor: '#f0f0f0',
+        borderBottomColor: brand.bgBlueLight,
     },
     modalContentBottom: {
         position: 'absolute',
@@ -275,11 +276,11 @@ const styles = StyleSheet.create({
     inputSearchStyle: {
         height: 40,
         borderWidth: 1,
-        borderColor: '#D9D9D9',
+        borderColor: brand.bgBlue,
         borderRadius: 8,
         paddingHorizontal: 8,
         marginBottom: 8,
-        backgroundColor: '#fff',
+        backgroundColor: brand.white,
     },
 });
 

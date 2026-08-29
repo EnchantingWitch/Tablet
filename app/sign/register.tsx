@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import CustomButton from '@/components/CustomButton';
 import { router } from 'expo-router';
 import React, { useEffect, useState } from 'react';
@@ -611,7 +612,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
        // paddingHorizontal: 20,
-        backgroundColor: '#fff'
+        backgroundColor: brand.white
     },
     image: {
         width: 142,
@@ -622,14 +623,14 @@ const styles = StyleSheet.create({
         marginBottom: 30,
     },
     input: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: brand.white,
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: '#D9D9D9',
+        borderColor: brand.bgBlue,
         width: '96%',
         height: 42,
        // paddingVertical: 'auto',
-        color: '#B3B3B3',
+        color: brand.bgBlue,
         textAlign: 'center',
         marginBottom: 20,
     },

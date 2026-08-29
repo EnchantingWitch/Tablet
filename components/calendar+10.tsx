@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import React, { useState } from 'react';
 import { View, Button, StyleSheet, Alert, Text } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -45,7 +46,7 @@ const styles = StyleSheet.create({
         flex: 1,
         justifyContent: 'center',
         padding: 20,
-        backgroundColor: '#fff',
+        backgroundColor: brand.white,
     },
     resultText: {
         fontSize: 14,

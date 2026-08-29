@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { useColorGray, useColorText } from '@/hooks/useColorText';
 import { Ionicons } from '@expo/vector-icons';
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -145,7 +146,7 @@ const DateInputWithPicker = ({ theme, post, statusreq, onChange, diseditable }: 
                {/*} <RNDateTimePicker value={startdata()} />*/}
 
                 <TextInput style={[styles.inputMin, { fontSize: ts(14), textAlignVertical: 'center', color: colorGray, borderColor: colorGray }]}
-                    placeholderTextColor="#111"
+                    placeholderTextColor={brand.textPrimary}
                     editable={false}
                     value={ check? (formatDate(date)): (str) }
                     //value={ date}
@@ -187,7 +188,7 @@ const DateInputWithPicker = ({ theme, post, statusreq, onChange, diseditable }: 
     return (
         <View style={styles.containerrow}>
             <TextInput style={[styles.input, { fontSize: ts(14) }]}
-                placeholderTextColor="#111"
+                placeholderTextColor={brand.textPrimary}
                 editable={false}
                 value={check? (formatDate(date)): ' '}
             />
@@ -216,7 +217,7 @@ const styles = StyleSheet.create({
         //justifyContent: 'center',
         //paddingTop: 11,
         //paddingBottom: 12,
-        backgroundColor: '#fff',
+        backgroundColor: brand.white,
         width: '20%',
 
     },
@@ -225,7 +226,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         //paddingTop: 11,
         //paddingBottom: 12,
-        backgroundColor: '#fff',
+        backgroundColor: brand.white,
         width: '100%',
         flexDirection: 'row',
         marginBottom: 13,
@@ -237,7 +238,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         paddingTop: 11,
         paddingBottom: 12,
-        backgroundColor: '#fff',
+        backgroundColor: brand.white,
       //  width: '0%',
         flexDirection: 'row',
         marginBottom: 8,
@@ -246,23 +247,23 @@ const styles = StyleSheet.create({
         fontSize: 14,
     },
     input: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: brand.white,
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: '#D9D9D9',
+        borderColor: brand.bgBlue,
         width: '70%',
         height: 42,
-        color: '#B3B3B3',
+        color: brand.bgBlue,
         textAlign: 'center',
     },
     inputMin: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: brand.white,
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: '#D9D9D9',
+        borderColor: brand.bgBlue,
         width: '66%',
         height: 42,
-        color: '#B3B3B3',
+        color: brand.bgBlue,
         textAlign: 'center',
     },
 });

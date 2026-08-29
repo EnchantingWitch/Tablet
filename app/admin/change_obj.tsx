@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import CustomButton from '@/components/CustomButton';
 import FormField from '@/components/FormField';
 import ListOfOrganizations from '@/components/ListOfOrganizations';
@@ -301,8 +302,8 @@ useEffect(() => {
       {/** value={} для динамической подгрузки, передавать в компонент и через useEffect изменять, запрос нужен ли? */}
        <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', textAlign: 'center', marginBottom: 8  }}>Объект капитального строительства</Text>
         <TextInput
-            style={[ {fontSize: ts(14),  backgroundColor: '#FFFFFF', borderRadius: 8,borderWidth: 1, borderColor: colorGray, width: '96%', height: 42, paddingVertical: 'auto', color: colorGray, textAlign: 'center', marginBottom: 20,}]}
-            placeholderTextColor="#111"
+            style={[ {fontSize: ts(14),  backgroundColor: brand.white, borderRadius: 8,borderWidth: 1, borderColor: colorGray, width: '96%', height: 42, paddingVertical: 'auto', color: colorGray, textAlign: 'center', marginBottom: 20,}]}
+            placeholderTextColor={brand.textPrimary}
             onChangeText={setOks}
             value={oks}
             // editable={false}
@@ -310,8 +311,8 @@ useEffect(() => {
         
         <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', textAlign: 'center', marginBottom: 8  }}>Код ОКС</Text>
         <TextInput
-            style={[ {fontSize: ts(14),  backgroundColor: '#FFFFFF', borderRadius: 8,borderWidth: 1, borderColor: colorGray, width: '96%', height: 42, paddingVertical: 'auto', color: colorGray, textAlign: 'center', marginBottom: 20,}]}
-            placeholderTextColor="#111"
+            style={[ {fontSize: ts(14),  backgroundColor: brand.white, borderRadius: 8,borderWidth: 1, borderColor: colorGray, width: '96%', height: 42, paddingVertical: 'auto', color: colorGray, textAlign: 'center', marginBottom: 20,}]}
+            placeholderTextColor={brand.textPrimary}
             onChangeText={setKey}
             value={key}
             // editable={false}

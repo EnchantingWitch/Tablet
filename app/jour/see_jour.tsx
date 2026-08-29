@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { router, useLocalSearchParams } from 'expo-router';
 import React, { useEffect, useRef, useState } from 'react';
 import { Platform, ScrollView, StatusBar, StyleSheet, Text, TextInput, useWindowDimensions, View } from 'react-native';
@@ -152,7 +153,7 @@ const textInputRef = useRef<TextInput>(null);
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, width: '50%', color: colorGray, borderColor: colorGray}]}
             //placeholder="№ акта ИИ"
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={serNumber}
             editable={false}
             />
@@ -161,7 +162,7 @@ const textInputRef = useRef<TextInput>(null);
           {/*}  <View style={{width: '20%', alignItems: 'flex-end'}}>
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={numberII}
             editable={false}
             />
@@ -170,7 +171,7 @@ const textInputRef = useRef<TextInput>(null);
             <View style={{width: '60%', alignItems: 'center'}}>
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, lineHeight: ts(19), color: colorGray, borderColor: colorGray}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={date}//должна быть дата
             multiline
             editable={false}
@@ -183,7 +184,7 @@ const textInputRef = useRef<TextInput>(null);
            <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Подобъект</Text>
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, lineHeight: ts(19), color: colorGray, borderColor: colorGray}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={subObj}
             multiline
             editable={false}
@@ -194,7 +195,7 @@ const textInputRef = useRef<TextInput>(null);
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Система</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), lineHeight: 19, color: colorGray, borderColor: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={systemN}
             multiline
             editable={false}
@@ -221,7 +222,7 @@ const textInputRef = useRef<TextInput>(null);
                 selection: { start: 0, end: 0 }
                 });
             }}*/
-           placeholderTextColor="#111"
+           placeholderTextColor={brand.textPrimary}
             multiline
             value={comment}
           />
@@ -231,7 +232,7 @@ const textInputRef = useRef<TextInput>(null);
             style={[styles.input, {fontSize: ts(14), lineHeight: ts(22),
                 alignContent: 'center',
                 textAlignVertical: 'center', color: colorGray, borderColor: colorGray, }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={fullName}
             multiline
             editable={false}
@@ -241,7 +242,7 @@ const textInputRef = useRef<TextInput>(null);
             style={[styles.input, {fontSize: ts(14), lineHeight: ts(22),
                 alignContent: 'center',
                 textAlignVertical: 'center', color: colorGray, borderColor: colorGray, }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={organisation}
             multiline
             editable={false}
@@ -272,17 +273,17 @@ const textInputRef = useRef<TextInput>(null);
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
   },
   input: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#D9D9D9',
+    borderColor: brand.bgBlue,
     width: '96%',
     height: 42,
     paddingVertical: 'auto',
-    color: '#B3B3B3',
+    color: brand.bgBlue,
     textAlign: 'center',
     marginBottom: 20,
   },

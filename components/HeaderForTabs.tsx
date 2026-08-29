@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { useColorText } from "@/hooks/useColorText";
 import { Ionicons } from "@expo/vector-icons";
 import { useRouter } from "expo-router";
@@ -121,7 +122,7 @@ return (
             width: '100%', // Ширина полоски
             height: 1, // Толщина полоски
             marginRight: '20%',
-            backgroundColor: '#b8bdc0', // Цвет полоски
+            backgroundColor: brand.bgBlue, // Цвет полоски
           }} />
        {nameTab? 
               <Text

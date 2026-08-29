@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import DateInputWithPicker2 from '@/components/Calendar+';
 import DateInputWithPicker from '@/components/CalendarOnWrite';
 import CustomButton from '@/components/CustomButton';
@@ -592,7 +593,7 @@ console.log(JSON.stringify({
     <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Оборудование</Text>
     <TextInput
       style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray }]}
-      placeholderTextColor="#111"
+      placeholderTextColor={brand.textPrimary}
       onChangeText={setEquipment}
       value={equipment} 
     />
@@ -607,7 +608,7 @@ console.log(JSON.stringify({
         if(inputH > 120) inputH = 100
         setInputHeight(inputH)
       }}
-      placeholderTextColor="#111"
+      placeholderTextColor={brand.textPrimary}
       onChangeText={setDescription}
       value={description}
     />          
@@ -623,7 +624,7 @@ console.log(JSON.stringify({
     <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Заводской номер</Text>
     <TextInput
       style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray}]}
-      placeholderTextColor="#111"
+      placeholderTextColor={brand.textPrimary}
       onChangeText={setManufacturerNumber}
       value={manufacturerNumber} 
     />
@@ -724,7 +725,7 @@ console.log(JSON.stringify({
     <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Комментарий</Text>
     <TextInput
       style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray}]}
-      placeholderTextColor="#111"
+      placeholderTextColor={brand.textPrimary}
       onChangeText={setComExp}
       value={comExp} 
     />
@@ -743,17 +744,17 @@ console.log(JSON.stringify({
 export const styles = StyleSheet.create({
  container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
   },
   input: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#D9D9D9',
+    borderColor: brand.bgBlue,
     width: '96%',
     height: 42,
     paddingVertical: 'auto',
-    color: '#B3B3B3',
+    color: brand.bgBlue,
     textAlign: 'center',
     marginBottom: 20,
   },

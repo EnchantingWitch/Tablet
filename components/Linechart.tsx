@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { useColorBlue, useColorGray, useColorLightGray, useColorRed, useColorText } from "@/hooks/useColorText";
 import { useAuth } from "@/providers/AuthProvider";
 import { Ionicons } from "@expo/vector-icons";
@@ -69,7 +70,7 @@ const Linechart = ({
       dataPointText: "0",
       label: "21.05",
       dataPointRadius: 3,
-      dataPointColor: "#16a34a",
+      dataPointColor: brand.green,
       dataPointLabelWidth: 1,
     },
     {
@@ -290,7 +291,7 @@ const Linechart = ({
                   style={{
                     width: 34,
                     height: 34,
-                    tintColor: "#16a34a",
+                    tintColor: brand.green,
                     alignItems: "flex-end",
                   }}
                   source={require("../assets/images/arm.svg")}
@@ -299,7 +300,7 @@ const Linechart = ({
                   <Text
                     style={{
                       fontSize: ts(14),
-                      color: "#16a34a",
+                      color: brand.green,
                       fontWeight: "bold",
                       marginTop: 6,
                       marginRight: 5,
@@ -371,7 +372,7 @@ const Linechart = ({
                 color: colorText,
               }}
               spacing1={Dimensions.get("window").width * 0.092}
-              yAxisColor="#0BA5A4"
+              yAxisColor={brand.teal}
               color={colorBlue}
               lineSegments={[
                 {startIndex: 0, endIndex: 3},

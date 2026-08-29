@@ -1,3 +1,5 @@
+import { fontFamily } from '@/constants/Fonts';
+import { brand } from '@/constants/Colors';
 import CustomButton from '@/components/CustomButton';
 import FloatingScrollToTop from "@/components/FloatingScrollToTop";
 import HeaderForTabs from "@/components/HeaderForTabs";
@@ -346,7 +348,7 @@ const Defacts = () => {
                        
                       
                       {/**checkmark-circle-outline , close-circle-outline, square-outline*/}
-                     {/*} <Text style={{ fontSize: ts(16), color: '#334155', textAlign: 'center'  }}>{item.commentStatus} </Text>*/}
+                     {/*} <Text style={{ fontSize: ts(16), color: brand.textPrimary, textAlign: 'center'  }}>{item.commentStatus} </Text>*/}
                       </View>
                   </View>
                   </TouchableWithoutFeedback>
@@ -434,7 +436,7 @@ const PreviewLayout = ({
         </TouchableOpacity>
       ))}
     </View>
-    <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+    <View style={styles.separator} lightColor={brand.bgBlue} darkColor="rgba(255,255,255,0.1)" />
     <View style={[styles.container,]}>{children}</View>
   </View>
 );
@@ -475,7 +477,7 @@ const styles = StyleSheet.create(
     paddingBottom: 6,
     paddingRight: 8,
     paddingLeft: 8,*/
-    backgroundColor: '#E0F2FE',
+    backgroundColor: brand.bgBlueLight,
     marginHorizontal: '10%',
     marginBottom: 16,
     width: 103,
@@ -484,22 +486,22 @@ const styles = StyleSheet.create(
     justifyContent: 'center',
 
   },
-  //background: #F8FAFC;
+  //background: brand.bgBlueLight;
 
   selected: {
-    backgroundColor: '#E0F2FE',
+    backgroundColor: brand.bgBlueLight,
    // justifyContent: 'center',
     borderWidth: 0,
   },
   buttonLabel: {
-    fontFamily: 'Inter',
+    fontFamily,
     fontSize: 14,
     fontWeight: '400',
-    color: '#334155',
+    color: brand.textPrimary,
     textAlign: 'center',
   },
   selectedLabel: {
-    color: '#334155',
+    color: brand.textPrimary,
     //textAlign: 'center',
   },
   label: {

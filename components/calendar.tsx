@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import React, { useState } from 'react';
 import { View, Button, StyleSheet, Alert, Text, TextInput, TouchableOpacity, Image } from 'react-native';
 import DateTimePicker from '@react-native-community/datetimepicker';
@@ -28,12 +29,12 @@ const DateInputWithPicker = () => {
         <View style={styles.containerrow}>
             <TextInput style={styles.input}
                         //placeholder="Исполнитель"
-                placeholderTextColor="#111"
+                placeholderTextColor={brand.textPrimary}
                 value={formatDate(date)}
             />
       
             
-            <TouchableOpacity style={{width: '12%', height: '100%', backgroundColor: '#0072C8', alignSelf: 'flex-end', borderRadius: 4 }} onPress={showDatePicker}>
+            <TouchableOpacity style={{width: '12%', height: '100%', backgroundColor: brand.bluePrimary, alignSelf: 'flex-end', borderRadius: 4 }} onPress={showDatePicker}>
             <Image src={'./assets/images/building-2'} style={{alignSelf: 'flex-end'}}/> 
             {showPicker && (
                 <DateTimePicker
@@ -55,7 +56,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         //paddingTop: 11,
         //paddingBottom: 12,
-        backgroundColor: '#fff',
+        backgroundColor: brand.white,
         width:'20%',
         
     },
@@ -64,7 +65,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         paddingTop: 11,
         paddingBottom: 12,
-        backgroundColor: '#fff',
+        backgroundColor: brand.white,
         width:'96%',
         flexDirection: 'row',
         marginBottom: 8,
@@ -73,10 +74,10 @@ const styles = StyleSheet.create({
         fontSize: 14,
     },
     input: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: brand.white,
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: '#D9D9D9',
+        borderColor: brand.bgBlue,
         width: '85%',
         height: 40,
        // paddingVertical: 'auto',
@@ -84,7 +85,7 @@ const styles = StyleSheet.create({
         //paddingLeft: 16,
        // paddingRight: 16,
        // paddingBottom: 12,
-        color: '#B3B3B3',
+        color: brand.bgBlue,
         textAlign: 'center',
        // marginBottom: 20,
       },

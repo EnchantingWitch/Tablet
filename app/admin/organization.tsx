@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import CustomButton from '@/components/CustomButton';
 import { useColorGray, useColorText } from '@/hooks/useColorText';
 import { router, useLocalSearchParams } from 'expo-router';
@@ -115,10 +116,10 @@ console.log('id', id)
     <SafeAreaView style={{ flex: 1, backgroundColor: 'white' }}>
     <View style={styles.container}>
      
-  {/*}  <Text style={{ fontSize: ts(14), color: '#1E1E1E', fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>Организация</Text>
+  {/*}  <Text style={{ fontSize: ts(14), color: brand.textPrimary, fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>Организация</Text>
     */}  <TextInput
-      style={{width: '96%',fontSize: ts(14),backgroundColor: '#FFFFFF',borderRadius: 8,borderWidth: 1,borderColor: useColorGray(), height: 42,color: useColorGray(),textAlign: 'center',marginBottom: 20,}}
-      placeholderTextColor="#111"
+      style={{width: '96%',fontSize: ts(14),backgroundColor: brand.white,borderRadius: 8,borderWidth: 1,borderColor: useColorGray(), height: 42,color: useColorGray(),textAlign: 'center',marginBottom: 20,}}
+      placeholderTextColor={brand.textPrimary}
       value={org}
       onChangeText={setOrg}
     />

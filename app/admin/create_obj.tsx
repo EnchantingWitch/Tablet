@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 //import SmartKeyboardView from '@/components/SmartKeyboardView';
 import CustomButton from '@/components/CustomButton';
 import FormField from '@/components/FormField';
@@ -252,15 +253,15 @@ const request = async () => {
     <View style={styles.container}>
        <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>{'Объект капитального строительства'}</Text>
    <TextInput
-      style={{width: '96%',fontSize: ts(14),backgroundColor: '#FFFFFF',borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
-      placeholderTextColor="#111"
+      style={{width: '96%',fontSize: ts(14),backgroundColor: brand.white,borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
+      placeholderTextColor={brand.textPrimary}
       onChangeText={setOks}
       value={oks}
     />
      <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>{'Код ОКС'}</Text>
     <TextInput
-      style={{width: '96%',fontSize: ts(14),backgroundColor: '#FFFFFF',borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
-      placeholderTextColor="#111"
+      style={{width: '96%',fontSize: ts(14),backgroundColor: brand.white,borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
+      placeholderTextColor={brand.textPrimary}
       onChangeText={setKey}
       value={key}
     />

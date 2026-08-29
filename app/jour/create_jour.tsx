@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import DateInputWithPicker from '@/components/CalendarOnWrite';
 import CustomButton from '@/components/CustomButton';
 import { router, useLocalSearchParams } from 'expo-router';
@@ -318,7 +319,7 @@ useEffect(() => {
                 fontSize: ts(14), color: colorGray, borderColor: colorGray
               }
             ]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             onChangeText={setDescription}
             value={description}
           />

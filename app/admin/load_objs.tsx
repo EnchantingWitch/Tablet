@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import React, { useState } from "react";
 import { StyleSheet, Text, View, Button, TouchableOpacity, ActivityIndicator, useWindowDimensions,} from "react-native";
 import * as DocumentPicker from "expo-document-picker";
@@ -100,9 +101,9 @@ import { router } from "expo-router";
                    // isLoading={upLoading} // Можно добавить индикатор загрузки, если нужно
                   />
         <View >
-        {singleFile ? (<Text style={{fontSize: ts(14), color: '#1E1E1E', fontWeight: '400', marginBottom: 8, textAlign: 'center', paddingTop: 15}}>
+        {singleFile ? (<Text style={{fontSize: ts(14), color: brand.textPrimary, fontWeight: '400', marginBottom: 8, textAlign: 'center', paddingTop: 15}}>
           Выбран файл: {singleFile.name}</Text>):(
-            <Text style={{fontSize: ts(14), color: '#1E1E1E', fontWeight: '400', marginBottom: 8, textAlign: 'center', paddingTop: 15}}>Файл не выбран</Text>)
+            <Text style={{fontSize: ts(14), color: brand.textPrimary, fontWeight: '400', marginBottom: 8, textAlign: 'center', paddingTop: 15}}>Файл не выбран</Text>)
         }
         </View>     
         

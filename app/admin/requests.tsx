@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import HeaderForTabs from '@/components/HeaderForTabs';
 import { useColorSkyBlueCarpet, useColorText } from '@/hooks/useColorText';
 //import { Ionicons } from '@expo/vector-icons';
@@ -93,7 +94,7 @@ const DirectionLayout = () => {
                                   <View style={{width: '22%', justifyContent: 'center'}}>
                                   <Text style={{ fontSize: ts(14), color: colorText, textAlign: 'center' }}>Дата</Text>
                                   </View>
-           {/*} <Text style={{ fontSize: ts(14), color: '#1E1E1E' }}>Дата заявки</Text>*/}
+           {/*} <Text style={{ fontSize: ts(14), color: brand.textPrimary }}>Дата заявки</Text>*/}
           </View>
 
           <View style={{ flex: 15, marginTop: 12}}>

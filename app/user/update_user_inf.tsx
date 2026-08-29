@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { StatusBar } from 'expo-status-bar';
 import React, { useState, useEffect } from 'react';
 import { StyleSheet, Text, View, Button, TextInput, SafeAreaView, ScrollView, TouchableOpacity, useWindowDimensions, Image, Modal } from 'react-native';
@@ -69,18 +70,18 @@ const DetailsScreen = () => {
         
         <View style={{flex: 1, alignItems: 'center'}}>
 
-          <Text style={{ fontSize: ts(14), color: '#1E1E1E', fontWeight: 400, marginBottom: 8 }}>Категория замечания</Text>
+          <Text style={{ fontSize: ts(14), color: brand.textPrimary, fontWeight: 400, marginBottom: 8 }}>Категория замечания</Text>
           <TextInput
              style={[styles.input, {fontSize: ts(14) }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={category}
             editable={false}
           />
 
-          <Text style={{ fontSize: ts(14), color: '#1E1E1E', fontWeight: 400, marginBottom: 8 }}>Комментарий</Text>
+          <Text style={{ fontSize: ts(14), color: brand.textPrimary, fontWeight: 400, marginBottom: 8 }}>Комментарий</Text>
           <TextInput
              style={[styles.input, {fontSize: ts(14) }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={explanation}
             editable={false}
           />

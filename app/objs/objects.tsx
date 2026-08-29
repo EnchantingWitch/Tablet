@@ -1,3 +1,4 @@
+import { brand, withAlpha } from '@/constants/Colors';
 // TabOneScreen.tsx (обновленная версия)
 import CustomButton from '@/components/CustomButton';
 import FloatingScrollToTop from "@/components/FloatingScrollToTop";
@@ -1130,7 +1131,7 @@ const verifySavedData = async (objectId: string) => {
         styles.objectItem,
         { 
           backgroundColor: isSelectionMode && selectedObjects.some(obj => obj.codeCCS === item.codeCCS) 
-            ? 'rgba(0, 122, 255, 0.1)' 
+            ? withAlpha(brand.bluePrimary, 0.1) 
             : colorSkyBlue 
         }
       ]}>
@@ -1196,7 +1197,7 @@ const verifySavedData = async (objectId: string) => {
         {/* Предупреждение о максимальном выборе */}
         {maxSelectionReached && (
           <View style={styles.maxSelectionWarning}>
-            <Ionicons name="warning" size={16} color="#FF9500" />
+            <Ionicons name="warning" size={16} color={brand.yellow} />
             <Text style={styles.maxSelectionText}>
               Можно выбрать не более 3 объектов
             </Text>
@@ -1315,21 +1316,21 @@ const InstructionsModal: React.FC<InstructionsModalProps> = ({
           <Text style={modalStyles.title}>Режим выбора объектов</Text>
           
           <View style={modalStyles.instruction}>
-            <Ionicons name="checkbox-outline" size={20} color="#007AFF" />
+            <Ionicons name="checkbox-outline" size={20} color={brand.bluePrimary} />
             <Text style={modalStyles.instructionText}>
               Выберите объекты (максимум 3)
             </Text>
           </View>
           
           <View style={modalStyles.instruction}>
-            <Ionicons name="download-outline" size={20} color="#007AFF" />
+            <Ionicons name="download-outline" size={20} color={brand.bluePrimary} />
             <Text style={modalStyles.instructionText}>
               Для выбранных объектов будут загружены: структура, замечания и дефекты
             </Text>
           </View>
           
           <View style={modalStyles.instruction}>
-            <Ionicons name="save-outline" size={20} color="#007AFF" />
+            <Ionicons name="save-outline" size={20} color={brand.bluePrimary} />
             <Text style={modalStyles.instructionText}>
               Данные сохраняются локально для оффлайн-доступа
             </Text>
@@ -1389,19 +1390,19 @@ const styles = StyleSheet.create({
   },
   searchInput: {
     borderWidth: 1,
-    borderColor: '#E5E5EA',
+    borderColor: brand.bgBlue,
     borderRadius: 8,
     fontSize: 14,
-    color: '#000',
+    color: brand.black,
     paddingHorizontal: 12,
     paddingVertical: 8,
-    backgroundColor: '#F2F2F7',
+    backgroundColor: brand.bgBlueLight,
   },
   selectionInfo: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#F0F8FF',
+    backgroundColor: brand.bgBlueLight,
     padding: 12,
     borderRadius: 8,
     marginTop: 8,
@@ -1409,17 +1410,17 @@ const styles = StyleSheet.create({
   selectionInfoText: {
     fontSize: 14,
     fontWeight: '500',
-    color: '#007AFF',
+    color: brand.bluePrimary,
   },
   clearSelectionText: {
     fontSize: 14,
-    color: '#FF3B30',
+    color: brand.red,
     textDecorationLine: 'underline',
   },
   maxSelectionWarning: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#FFF4E5',
+    backgroundColor: brand.yellowPale,
     padding: 10,
     borderRadius: 8,
     marginBottom: 12,
@@ -1427,7 +1428,7 @@ const styles = StyleSheet.create({
   },
   maxSelectionText: {
     fontSize: 14,
-    color: '#FF9500',
+    color: brand.yellow,
     flex: 1,
   },
   list: {
@@ -1489,7 +1490,7 @@ const modalStyles = StyleSheet.create({
     fontWeight: 'bold',
     marginBottom: 20,
     textAlign: 'center',
-    color: '#000',
+    color: brand.black,
   },
   instruction: {
     flexDirection: 'row',
@@ -1501,7 +1502,7 @@ const modalStyles = StyleSheet.create({
     marginLeft: 12,
     fontSize: 14,
     lineHeight: 20,
-    color: '#000',
+    color: brand.black,
   },
   buttons: {
     flexDirection: 'row',
@@ -1515,15 +1516,15 @@ const modalStyles = StyleSheet.create({
     alignItems: 'center',
   },
   cancelButton: {
-    backgroundColor: '#F2F2F7',
+    backgroundColor: brand.bgBlueLight,
   },
   cancelButtonText: {
-    color: '#000',
+    color: brand.black,
     fontSize: 16,
     fontWeight: '600',
   },
   confirmButton: {
-    backgroundColor: '#007AFF',
+    backgroundColor: brand.bluePrimary,
   },
   confirmButtonText: {
     color: 'white',

@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import HeaderForTabs from '@/components/HeaderForTabs';
 import List from '@/components/SystemsForTwo';
 import { useColorBlue, useColorGray, useColorSkyBlueCarpet, useColorText } from '@/hooks/useColorText';
@@ -224,7 +225,7 @@ const DirectionLayout = () => {
      */}
      <Text style={{ fontSize: ts(14), color: colorText, textAlign: 'center', marginStart: 3 }}> {item.userInfo.organisation}</Text>
         
-            {/*} <Text style={{ fontSize: ts(14), color: '#334155', textAlign: 'left', marginStart: 3 }}> {item.userInfo[parseInt(item.id, 10)]?.organisation || 'Не указано'}</Text>
+            {/*} <Text style={{ fontSize: ts(14), color: brand.textPrimary, textAlign: 'left', marginStart: 3 }}> {item.userInfo[parseInt(item.id, 10)]?.organisation || 'Не указано'}</Text>
         */}
        
              </View>    
@@ -232,7 +233,7 @@ const DirectionLayout = () => {
              <View style={{width: '15%', justifyContent: 'center', alignItems: 'flex-end'}}>
             
              {(item.isEnabled ===true) && ( <Ionicons name="checkbox" size={25} color={useColorBlue()} />)}
-             {(item.isEnabled ===false) &&  <Ionicons name="square" size={25} color="#FfffFF" />}
+             {(item.isEnabled ===false) &&  <Ionicons name="square" size={25} color={brand.white} />}
           
              </View>
          </View>

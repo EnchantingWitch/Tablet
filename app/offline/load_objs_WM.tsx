@@ -1,3 +1,4 @@
+import { brand, withAlpha } from '@/constants/Colors';
 import { useColorBlue, useColorGray, useColorGreen, useColorText } from '@/hooks/useColorText';
 import { useToken } from '@/hooks/useToken';
 // import * as Network from 'expo-network';
@@ -334,7 +335,7 @@ const OfflineCheckScreen = () => {
         
        {/*} {selectedObject && (
           <TouchableOpacity
-            style={[styles.continueButton, { backgroundColor: '#2196F3' }]}
+            style={[styles.continueButton, { backgroundColor: brand.bluePrimary }]}
             onPress={() => handleObjectSelect(selectedObject)}
           >
             <Text style={styles.continueButtonText}>
@@ -371,7 +372,7 @@ const OfflineCheckScreen = () => {
       case 'network_unavailable':
         return (
           <View style={[styles.statusContainer, {borderColor: colorBlue, borderWidth: 2, borderRadius: 8}]}>
-            <Text style={[styles.icon, { color: '#FF9800' }]}>⚠</Text>
+            <Text style={[styles.icon, { color: brand.yellow }]}>⚠</Text>
             <Text style={[styles.message, { color: colorText, marginTop: 20 }]}>{message}</Text>
             <Text style={[styles.hint, { color: colorText }]}>
               Проверьте подключение к Wi-Fi или мобильной сети
@@ -382,7 +383,7 @@ const OfflineCheckScreen = () => {
       case 'auth_not_found':
         return (
           <View style={[styles.statusContainer, {borderColor: colorBlue, borderWidth: 2, borderRadius: 8}]}>
-            <Text style={[styles.icon, { color: '#F44336' }]}>✗</Text>
+            <Text style={[styles.icon, { color: brand.red }]}>✗</Text>
             <Text style={[styles.message, { color: colorText, marginTop: 20 }]}>{message}</Text>
             <Text style={[styles.hint, { color: colorText }]}>
               Для работы в оффлайн режиме необходимо авторизоваться при наличии интернета
@@ -398,7 +399,7 @@ const OfflineCheckScreen = () => {
       case 'invalid_role':
         return (
           <View style={[styles.statusContainer, {borderColor: colorBlue, borderWidth: 2, borderRadius: 8}]}>
-            <Text style={[styles.icon, { color: '#F44336' }]}>🚫</Text>
+            <Text style={[styles.icon, { color: brand.red }]}>🚫</Text>
             <Text style={[styles.message, { color: colorText, marginTop: 20 }]}>{message}</Text>
             <Text style={[styles.hint, { color: colorText }]}>
               Оффлайн режим доступен только для ролей: исполнитель ПНР и руководитель ПНР
@@ -414,7 +415,7 @@ const OfflineCheckScreen = () => {
       case 'no_objects':
         return (
           <View style={[styles.statusContainer, {borderColor: colorBlue, borderWidth: 2, borderRadius: 8}]}>
-            <Text style={[styles.icon, { color: '#FF9800' }]}>📁</Text>
+            <Text style={[styles.icon, { color: brand.yellow }]}>📁</Text>
             <Text style={[styles.message, { color: colorText, marginTop: 20 }]}>{message}</Text>
             <Text style={[styles.hint, { color: colorText }]}>
               Подключитесь к интернету и загрузите объекты для работы оффлайн
@@ -469,7 +470,7 @@ const OfflineCheckScreen = () => {
       case 'error':
         return (
           <View style={[styles.statusContainer, {borderColor: colorBlue, borderWidth: 2, borderRadius: 8}]}>
-            <Text style={[styles.icon, { color: '#F44336' }]}>❌</Text>
+            <Text style={[styles.icon, { color: brand.red }]}>❌</Text>
             <Text style={[styles.message, { color: colorText, marginTop: 20 }]}>
               Произошла ошибка при проверке
             </Text>
@@ -581,7 +582,7 @@ const OfflineCheckScreen = () => {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
   },
   scrollContent: {
     flexGrow: 1,
@@ -602,14 +603,14 @@ const styles = StyleSheet.create({
   },
   progressBar: {
     height: 4,
-    backgroundColor: '#E0E0E0',
+    backgroundColor: brand.bgBlue,
     borderRadius: 2,
     marginBottom: 10,
     overflow: 'hidden',
   },
   progressFill: {
     height: '100%',
-    backgroundColor: '#4CAF50',
+    backgroundColor: brand.green,
     borderRadius: 2,
   },
   progressSteps: {
@@ -624,7 +625,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginBottom: 40,
     padding: 20,
-    //backgroundColor: '#F5F5F5',
+    //backgroundColor: brand.bgBlueLight,
     borderRadius: 10,
   },
   icon: {
@@ -644,7 +645,7 @@ const styles = StyleSheet.create({
   userInfo: {
     marginTop: 20,
     padding: 15,
-    backgroundColor: 'rgba(76, 175, 80, 0.1)',
+    backgroundColor: withAlpha(brand.green, 0.1),
     borderRadius: 8,
     width: '100%',
   },
@@ -667,7 +668,7 @@ const styles = StyleSheet.create({
     width: '100%',
     padding: 20,
     alignItems: 'center',
-    backgroundColor: 'rgba(255, 152, 0, 0.1)',
+    backgroundColor: withAlpha(brand.yellow, 0.1),
     borderRadius: 8,
     marginTop: 20,
   },
@@ -695,11 +696,11 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#E0E0E0',
+    borderColor: brand.bgBlue,
   },
   objectItemSelected: {
-    backgroundColor: 'rgba(33, 150, 243, 0.1)',
-    borderColor: '#2196F3',
+    backgroundColor: withAlpha(brand.bluePrimary, 0.1),
+    borderColor: brand.bluePrimary,
   },
   objectInfo: {
     flex: 1,
@@ -711,7 +712,7 @@ const styles = StyleSheet.create({
   },
   objectNameSelected: {
     fontWeight: 'bold',
-  //  color: '#2196F3',
+  //  color: brand.bluePrimary,
   },
   objectCode: {
     fontSize: 14,
@@ -721,7 +722,7 @@ const styles = StyleSheet.create({
     width: 30,
     height: 30,
     borderRadius: 15,
-    backgroundColor: '#4CAF50',
+    backgroundColor: brand.green,
     justifyContent: 'center',
     alignItems: 'center',
     marginLeft: 10,
@@ -747,7 +748,7 @@ const styles = StyleSheet.create({
   },
   
   infoBox: {
-    backgroundColor: '#F0F8FF',
+    backgroundColor: brand.bgBlueLight,
     padding: 15,
     borderRadius: 8,
     marginBottom: 20,
@@ -773,8 +774,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     paddingVertical: 10,
     paddingHorizontal: 20,
-    backgroundColor: '#2196F3',
-    color: '#FFFFFF',
+    backgroundColor: brand.bluePrimary,
+    color: brand.white,
     borderRadius: 8,
   },
   exitButton: {
@@ -782,8 +783,8 @@ const styles = StyleSheet.create({
     fontWeight: '600',
     paddingVertical: 10,
     paddingHorizontal: 20,
-    backgroundColor: '#F44336',
-    color: '#FFFFFF',
+    backgroundColor: brand.red,
+    color: brand.white,
     borderRadius: 8,
   },
   actionButtons: {
@@ -799,14 +800,14 @@ const styles = StyleSheet.create({
     overflow: 'hidden',
   },
   primaryButton: {
-    backgroundColor: '#2196F3',
-    color: '#FFFFFF',
+    backgroundColor: brand.bluePrimary,
+    color: brand.white,
   },
   secondaryButton: {
-    backgroundColor: '#F5F5F5',
-    color: '#333333',
+    backgroundColor: brand.bgBlueLight,
+    color: brand.textPrimary,
     borderWidth: 1,
-    borderColor: '#DDD',
+    borderColor: brand.bgBlue,
   },
 });
 

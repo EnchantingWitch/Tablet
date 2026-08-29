@@ -1,3 +1,4 @@
+import { brand, withAlpha } from '@/constants/Colors';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, TouchableOpacity } from 'react-native';
@@ -56,7 +57,7 @@ const FloatingScrollToTop = ({
         onPress={onPress}
         activeOpacity={0.8}
       >
-        <AntDesign name="upcircleo" size={40} color='rgba(0, 51, 102, 0.3)' />
+        <AntDesign name="upcircleo" size={40} color={withAlpha(brand.navyDark, 0.3)} />
       </TouchableOpacity>
     </Animated.View>
   );
@@ -71,14 +72,14 @@ const styles = StyleSheet.create({
   },
   button: {
     
-    backgroundColor: 'rgba(255, 255, 255, 0.4)', //'rgba(0, 122, 255, 0.9)',
+    backgroundColor: 'rgba(255, 255, 255, 0.4)', //withAlpha(brand.bluePrimary, 0.9),
     width: 56,
     height: 56,
     borderRadius: 28,
     justifyContent: 'center',
     alignItems: 'center',
     elevation: 6,
-    shadowColor: '#000',
+    shadowColor: brand.black,
     shadowOffset: { width: 0, height: 3 },
     shadowOpacity: 0.3,
     shadowRadius: 4,

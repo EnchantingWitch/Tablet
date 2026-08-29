@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 //import Calendar from '@/components/Calendar+';
 //import CalendarWithoutDel from '@/components/CalendarWithoutDel';
 import CustomButton from '@/components/CustomButton';
@@ -334,7 +335,7 @@ useEffect(() => {
               <TextInput
               style={[styles.input, {fontSize: ts(14),  width: '50%', color: colorGray, borderColor: colorGray}]}
               //placeholder="№ акта ИИ"
-              placeholderTextColor="#111"
+              placeholderTextColor={brand.textPrimary}
               value={editedSerialNumber.toString()}
               editable={false}
               />
@@ -344,7 +345,7 @@ useEffect(() => {
                <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, width: '100%', color: colorGray, borderColor: colorGray}]}
             //placeholder="№ акта ИИ"
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedDate}
             editable={false}
             />
@@ -378,7 +379,7 @@ useEffect(() => {
           {/*}  <TextInput
             style={[styles.input,  {flex: 1, height: Math.max(42, inputHeight), fontSize: ts(14) }]} // Минимальная высота 40
                         
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedDescription}
             onChangeText={setEditedDescription}
             multiline
@@ -393,7 +394,7 @@ useEffect(() => {
                 height: inputHeight // динамическая высота
             }]}
             maxLength={1000}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedDescription}
             onChangeText={setEditedDescription}
             multiline
@@ -417,7 +418,7 @@ useEffect(() => {
             style={[styles.input, {fontSize: ts(14), lineHeight: ts(22), color: colorGray, borderColor: colorGray,
                 alignContent: 'center',
                 textAlignVertical: 'center', }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={fullName}
             multiline
             editable={false}
@@ -427,7 +428,7 @@ useEffect(() => {
             style={[styles.input, {fontSize: ts(14), lineHeight: ts(22), color: colorGray, borderColor: colorGray,
                 alignContent: 'center',
                 textAlignVertical: 'center', }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={organisation}
             multiline
             editable={false}

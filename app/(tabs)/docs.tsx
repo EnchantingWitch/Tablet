@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import CustomButton from "@/components/CustomButton";
 import HeaderForTabs from "@/components/HeaderForTabs";
 import { PermissionGuard } from "@/components/PermissionGuard";
@@ -668,7 +669,7 @@ const saveF = async (toFetch: string, fileName: string, extands: string, mimeTyp
             >
               <Image
               
-                style={{ width: 122-23, height: 100, marginRight: '2%',  }}//tintColor: "#0072C8",
+                style={{ width: 122-23, height: 100, marginRight: '2%',  }}//tintColor: brand.bluePrimary,
                 source={require("../../assets/images/journal.svg")}
               />
 

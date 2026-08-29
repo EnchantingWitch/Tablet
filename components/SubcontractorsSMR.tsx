@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import ListOfOrganizations from '@/components/ListOfOrganizations';
 import { useColorGray, useColorSkyBlueCarpet, useColorText } from '@/hooks/useColorText';
 import Ionicons from '@expo/vector-icons/Ionicons';
@@ -13,7 +14,7 @@ import {
 import CustomButton from './CustomButton';
 
 // Константы для стилей
-//const colorGray = '#666666';
+//const colorGray = brand.gray;
 
 const SubcontractorsSMR = ({
   visible,
@@ -152,7 +153,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     borderRadius: 10,
     padding: 20,
-    shadowColor: '#000',
+    shadowColor: brand.black,
     shadowOffset: {
       width: 0,
       height: 2,

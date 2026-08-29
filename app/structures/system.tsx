@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import DateInputWithPicker from '@/components/Calendar+';
 import CustomButton from '@/components/CustomButton';
 import FormField from '@/components/FormField';
@@ -283,7 +284,7 @@ const [subcontractors, setSubcontractors] = useState([]);
     <ScrollView style={{ flex: 1, backgroundColor: 'white' }}>
       
     <View style={styles.container}>
-   {/* <Text style={{ fontSize: ts(20), color: '#1E1E1E', fontWeight: '500', textAlign: 'center', marginBottom: '23' }}>{system}</Text> */}
+   {/* <Text style={{ fontSize: ts(20), color: brand.textPrimary, fontWeight: '500', textAlign: 'center', marginBottom: '23' }}>{system}</Text> */}
 
       <View style={styles.separator}/>
       <PermissionGuard required='SYSTEM_EDIT' 
@@ -422,14 +423,14 @@ const styles = StyleSheet.create({
     width: '80%',
   },
   input: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#D9D9D9',
+    borderColor: brand.bgBlue,
     width: '96%',
     height: 42,
     paddingVertical: 'auto',
-    color: '#B3B3B3',
+    color: brand.bgBlue,
     textAlign: 'center',
     marginBottom: 20,
   },

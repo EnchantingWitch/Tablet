@@ -1,3 +1,5 @@
+import { fontFamily } from '@/constants/Fonts';
+import { brand } from '@/constants/Colors';
 import { database } from '@/DB/database';
 import React, { useEffect, useState } from 'react';
 import { Button, ScrollView, StyleSheet, Text, View } from 'react-native';
@@ -84,7 +86,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: brand.white,
   },
   title: {
     fontSize: 20,
@@ -99,13 +101,13 @@ const styles = StyleSheet.create({
     flex: 1,
     marginVertical: 20,
     padding: 10,
-    backgroundColor: '#f5f5f5',
+    backgroundColor: brand.bgBlueLight,
     borderRadius: 5,
   },
   detail: {
     fontSize: 14,
     marginBottom: 5,
-    fontFamily: 'monospace',
+    fontFamily,
   },
 });
 

@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { PermissionGuard } from '@/components/PermissionGuard';
 import { useColorText } from '@/hooks/useColorText';
 import AntDesign from '@expo/vector-icons/AntDesign';
@@ -142,9 +143,9 @@ const styles = StyleSheet.create({
     bottom: 0,
     left: 0,
     right: 0,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
     borderTopWidth: 1,
-    borderTopColor: '#EEE',
+    borderTopColor: brand.bgBlue,
   },
   tabBarContainer: {
     flexDirection: 'row',
@@ -163,15 +164,15 @@ const styles = StyleSheet.create({
   tabLabel: {
     marginTop: 4,
     fontSize: 12,
-    color: '#888',
+    color: brand.gray,
     //fontFamily: 'HeliosCondC',
   },
   activeTab: {
     borderBottomWidth: 2,
-    borderBottomColor: '#1E1E1E',
+    borderBottomColor: brand.textPrimary,
   },
   activeLabel: {
-    color: '#1E1E1E',
+    color: brand.textPrimary,
     fontWeight: '600',
   },
 });

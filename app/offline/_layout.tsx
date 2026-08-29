@@ -1,3 +1,5 @@
+import { fontFamily } from '@/constants/Fonts';
+import { brand } from '@/constants/Colors';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
 import { useColorText } from '@/hooks/useColorText';
 import { Stack } from 'expo-router';
@@ -31,8 +33,9 @@ headerShown: false,
           headerTintColor: colorText,
           headerShadowVisible: false,
 
-          headerStyle: { backgroundColor: '#FFFFFF' },
+          headerStyle: { backgroundColor: brand.white },
           headerTitleStyle: {
+            fontFamily,
             fontSize: ts(20), // Укажите нужный размер шрифта
             //fontWeight: 'bold', // Опционально: можно добавить жирность
             // Другие стили для заголовка, если нужно
@@ -48,8 +51,9 @@ headerShown: false,
           headerTintColor: colorText,
           headerShadowVisible: false,
 
-          headerStyle: { backgroundColor: '#FFFFFF' },
+          headerStyle: { backgroundColor: brand.white },
           headerTitleStyle: {
+            fontFamily,
             fontSize: ts(20), // Укажите нужный размер шрифта
             //fontWeight: 'bold', // Опционально: можно добавить жирность
             // Другие стили для заголовка, если нужно
@@ -66,8 +70,9 @@ headerShown: false,
           headerTintColor: colorText,
           headerShadowVisible: false,
 
-          headerStyle: { backgroundColor: '#FFFFFF' },
+          headerStyle: { backgroundColor: brand.white },
           headerTitleStyle: {
+            fontFamily,
             fontSize: ts(20), // Укажите нужный размер шрифта
             //fontWeight: 'bold', // Опционально: можно добавить жирность
             // Другие стили для заголовка, если нужно
@@ -84,8 +89,9 @@ headerShown: false,
           headerTintColor: colorText,
           headerShadowVisible: false,
 
-          headerStyle: { backgroundColor: '#FFFFFF' },
+          headerStyle: { backgroundColor: brand.white },
           headerTitleStyle: {
+            fontFamily,
             fontSize: ts(20), // Укажите нужный размер шрифта
             //fontWeight: 'bold', // Опционально: можно добавить жирность
             // Другие стили для заголовка, если нужно

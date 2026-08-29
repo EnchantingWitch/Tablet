@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { StyleSheet, View, Pressable, Text } from 'react-native';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link} from 'expo-router';
@@ -42,7 +43,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 3,
   },
-  button: { borderRadius: 8, backgroundColor: '#0072C8', width: 272, height: 40, paddingVertical: 8,  alignSelf: 'center', marginBottom: 15},
+  button: { borderRadius: 8, backgroundColor: brand.bluePrimary, width: 272, height: 40, paddingVertical: 8,  alignSelf: 'center', marginBottom: 15},
 /*
   button: {
     borderRadius: 10,
@@ -55,10 +56,10 @@ const styles = StyleSheet.create({
   buttonIcon: {
     paddingRight: 8,
   },
-  buttonLabel:{fontSize: 16, fontWeight: '400', color: '#F5F5F5', textAlign: 'center',},
+  buttonLabel:{fontSize: 16, fontWeight: '400', color: brand.bgBlueLight, textAlign: 'center',},
 /*
   buttonLabel: {
-    color: '#fff',
+    color: brand.white,
     fontSize: 16,
   },*/
 });

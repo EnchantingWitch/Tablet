@@ -23,7 +23,7 @@ import {
   View
 } from "react-native";
 import { API_BASE_URL } from '../../config/api';
-import { styles } from '../../constants/Colors';
+import { styles, brand } from '../../constants/Colors';
 import { useScrollToLastViewedWithState } from '../../hooks/useScrollToLastViewedWithState';
 import { useToken } from '../../hooks/useToken';
 import type { Structure } from "./structure";
@@ -483,7 +483,7 @@ useEffect(() => {
                       }}
                     >
                       {item.commentStatus == "Выдано" ? (
-                        <Ionicons name="square" size={25} color={'#FFFFFF'} />
+                        <Ionicons name="square" size={25} color={brand.white} />
                       ) : (
                         ""
                       )}

@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { router, useLocalSearchParams } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Alert, Modal, Platform, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, useWindowDimensions, View } from 'react-native';
@@ -515,7 +516,7 @@ async function showErrorNotification(error: Error) {
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, borderColor: colorGray, color: colorGray}]}
             //placeholder="№ акта ИИ"
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={serNumber}
             editable={false}
             />
@@ -524,7 +525,7 @@ async function showErrorNotification(error: Error) {
             <View style={{width: '20%', alignItems: 'flex-end'}}>
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, borderColor: colorGray, color: colorGray}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={numberII}
             editable={false}
             />
@@ -533,7 +534,7 @@ async function showErrorNotification(error: Error) {
             <View style={{width: '60%', alignItems: 'center'}}>
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, lineHeight: ts(19), borderColor: colorGray, color: colorGray}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={subObj}
             multiline
             editable={false}
@@ -546,7 +547,7 @@ async function showErrorNotification(error: Error) {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Система</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), lineHeight: 19, borderColor: colorGray, color: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={systemN}
             multiline
             editable={false}
@@ -574,7 +575,7 @@ async function showErrorNotification(error: Error) {
              // textAlignVertical: 'top'
             }
           ]}
-           placeholderTextColor="#111"
+           placeholderTextColor={brand.textPrimary}
             multiline
            // onChangeText={setComment}
           /*  onContentSizeChange={e=>{
@@ -590,7 +591,7 @@ async function showErrorNotification(error: Error) {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Статус</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), borderColor: colorGray, color: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={commentStat}
             editable={false}
           />
@@ -598,7 +599,7 @@ async function showErrorNotification(error: Error) {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Исполнитель</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), borderColor: colorGray, color: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={execut}
             editable={false}
           />
@@ -617,7 +618,7 @@ async function showErrorNotification(error: Error) {
               <View style={{width: '49%', justifyContent: 'center'}}>
                 <TextInput
                   style={[styles.input, {fontSize: ts(14), width: '100%', marginTop: 6, borderColor: colorGray, color: colorGray }]}
-                  placeholderTextColor="#111"
+                  placeholderTextColor={brand.textPrimary}
                   value={startD}
                   editable={false}
                 />
@@ -626,7 +627,7 @@ async function showErrorNotification(error: Error) {
               <View style={{width: '49%', flexDirection: 'row', justifyContent: 'flex-end'}}>
               <TextInput
                   style={[styles.input, {fontSize: ts(14), width: '100%', marginTop: 6, alignContent: 'flex-end', borderColor: colorGray, color: colorGray}]}
-                  placeholderTextColor="#111"
+                  placeholderTextColor={brand.textPrimary}
                   value={planD}
                   editable={false}
                 />
@@ -730,7 +731,7 @@ async function showErrorNotification(error: Error) {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: 400, marginBottom: 8 }}>Категория замечания</Text>
           <TextInput
              style={[styles.input, {fontSize: ts(14), borderColor: colorGray, color: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={category}
             editable={false}
           />
@@ -738,7 +739,7 @@ async function showErrorNotification(error: Error) {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: 400, marginBottom: 8 }}>Комментарий</Text>
           <TextInput
              style={[styles.input, {fontSize: ts(14), borderColor: colorGray, color: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={explanation}
             editable={false}
           />
@@ -784,17 +785,17 @@ async function showErrorNotification(error: Error) {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
   },
   input: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#D9D9D9',
+    borderColor: brand.bgBlue,
     width: '96%',
     height: 42,
     paddingVertical: 'auto',
-    color: '#B3B3B3',
+    color: brand.bgBlue,
     textAlign: 'center',
     marginBottom: 20,
   },

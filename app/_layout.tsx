@@ -21,7 +21,7 @@ SplashScreen.preventAutoHideAsync();
 
 export default function RootLayout() {
   const [loaded, error] = useFonts({
-    HeliosCondC: require('../assets/fonts/helioscondc.otf'),
+    BebasNeue: require('../assets/fonts/BebasNeue-Regular.ttf'),
     ...FontAwesome.font,
   });
 

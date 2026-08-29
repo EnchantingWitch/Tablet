@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import CustomButton from '@/components/CustomButton';
 import Scroll from '@/components/Scroll';
 import { useColorBlue, useColorGray, useColorSkyBlueCarpet, useColorText } from '@/hooks/useColorText';
@@ -187,15 +188,15 @@ const handleSubmit = async ()  => {
       <View style={styles.container}>
       <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>Пользователь</Text>
       <TextInput
-      style={{width: '96%',fontSize: ts(14),backgroundColor: '#FFFFFF',borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
-      placeholderTextColor="#111"
+      style={{width: '96%',fontSize: ts(14),backgroundColor: brand.white,borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
+      placeholderTextColor={brand.textPrimary}
       editable={false}
       value={data.fullName}
     />
     <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>Роль пользователя</Text>
     <TextInput
-      style={{width: '96%',fontSize: ts(14),backgroundColor: '#FFFFFF',borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
-      placeholderTextColor="#111"
+      style={{width: '96%',fontSize: ts(14),backgroundColor: brand.white,borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
+      placeholderTextColor={brand.textPrimary}
       editable={false}
       value={
        data.role === 'USER'? 'Пользователь': 
@@ -209,15 +210,15 @@ const handleSubmit = async ()  => {
     />
     <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>Организация</Text>
       <TextInput
-      style={{width: '96%',fontSize: ts(14),backgroundColor: '#FFFFFF',borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
-      placeholderTextColor="#111"
+      style={{width: '96%',fontSize: ts(14),backgroundColor: brand.white,borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
+      placeholderTextColor={brand.textPrimary}
       editable={false}
       value={data.organisation}
     />
     <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>Дата заявки</Text>
       <TextInput
-      style={{width: '96%',fontSize: ts(14),backgroundColor: '#FFFFFF',borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
-      placeholderTextColor="#111"
+      style={{width: '96%',fontSize: ts(14),backgroundColor: brand.white,borderRadius: 8,borderWidth: 1,borderColor: colorGray,height: 42,color: colorGray,textAlign: 'center',marginBottom: 20,}}
+      placeholderTextColor={brand.textPrimary}
       editable={false}
       value={data.creationTime}
     />

@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { useColorText } from '@/hooks/useColorText';
 import { Ionicons } from '@expo/vector-icons';
 import { Asset } from 'expo-asset';
@@ -213,7 +214,7 @@ const styles = StyleSheet.create({
         fontSize: 14,
         paddingBottom: 2,
         fontWeight: '500',
-        color: '#0072C8',
+        color: brand.bluePrimary,
         alignSelf: 'center'
     },
     emptyState: {

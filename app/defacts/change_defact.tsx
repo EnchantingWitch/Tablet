@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import Calendar from '@/components/Calendar+';
 import CalendarWithoutDel from '@/components/CalendarWithoutDel';
 import CustomButton from '@/components/CustomButton';
@@ -332,7 +333,7 @@ const json = JSON.stringify({
   /*if (loading) {
     return (
       <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-        <ActivityIndicator size="large" color="#0000ff" />
+        <ActivityIndicator size="large" color={brand.bluePrimary} />
       </View>
     );
   }*/
@@ -761,7 +762,7 @@ useEffect(() => {
             </View>
 
            {/*} <View style={{width: '20%', alignItems: 'center'}}>
-            <Text style={{ fontSize: ts(14), color: '#1E1E1E', fontWeight: '400', textAlign: 'center'}}>№ АИИ</Text>
+            <Text style={{ fontSize: ts(14), color: brand.textPrimary, fontWeight: '400', textAlign: 'center'}}>№ АИИ</Text>
             </View>*/}
 
             <View style={{width: '80%', alignItems: 'center'}}>
@@ -775,7 +776,7 @@ useEffect(() => {
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, color: colorGray, borderColor: colorGray}]}
             //placeholder="№ акта ИИ"
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedSerialNumber.toString()}
             editable={false}
             />
@@ -784,7 +785,7 @@ useEffect(() => {
            {/*} <View style={{width: '20%', alignItems: 'flex-end'}}>
             <TextInput
             style={[styles.input, {fontSize: ts(14),marginTop: 6}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedIinumber}
             editable={false}
             />
@@ -793,7 +794,7 @@ useEffect(() => {
             <View style={{width: '80%', alignItems: 'center', paddingTop: 6}}>
             {/*<TextInput
             style={[styles.input, ]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedSubObject}
             editable={false}
             />*/}
@@ -823,7 +824,7 @@ useEffect(() => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Оборудование</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedEquipment}
             onChangeText={setEditedEquipment}
           />
@@ -831,7 +832,7 @@ useEffect(() => {
           <TextInput
             style={[styles.input,  {flex: 1, height: Math.max(42, inputHeight), fontSize: ts(14), color: colorGray, borderColor: colorGray }]} // Минимальная высота 40
                         
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedDescription}
             onChangeText={setEditedDescription}
             multiline
@@ -853,7 +854,7 @@ useEffect(() => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Заводской номер</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedManufacturerNumber}
             onChangeText={setManufacturerNumber}
           />
@@ -861,7 +862,7 @@ useEffect(() => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Статус</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={editedCommentStatus}
             editable={false}
           />
@@ -988,7 +989,7 @@ useEffect(() => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Комментарий</Text>
           <TextInput
                       style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray}]}
-                      placeholderTextColor="#111"
+                      placeholderTextColor={brand.textPrimary}
                       value={editedCommentExplanation}
                       
                       onChangeText={setEditedCommentExplanation}
@@ -1027,7 +1028,7 @@ const stylHead = StyleSheet.create({
     //  rowGap: 30,
     //   flexDirection: 'column',
     //   justifyContent: 'flex-start',
-    backgroundColor: '#708fff',
+    backgroundColor: brand.bluePale,
     alignItems: 'center',
     // alignContent: 'space-around',
     justifyContent: 'center',

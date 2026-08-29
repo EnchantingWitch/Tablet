@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { useColorBlue, useColorGray, useColorLightGray, useColorRed, useColorSkyBlueText, useColorText } from '@/hooks/useColorText';
 import { Image } from 'expo-image';
 import React from 'react';
@@ -37,12 +38,12 @@ const PiechartBig = ({ totalQuantity, blueQuantity, greenQuantity, redQuantity, 
     //value: (totalQuantity===0 )? 1: (greenQuantity!=0 && blueQuantity!=0)? (greenQuantity!=blueQuantity)? (totalQuantity-blueQuantity-greenQuantity-redQuantity) : (totalQuantity-blueQuantity-redQuantity) : (totalQuantity-redQuantity),
     value: (totalQuantity===0 && blueQuantity===0 && redQuantity===0)? 1: totalQuantity-blueQuantity-redQuantity,
     color: (totalQuantity===0 && blueQuantity===0 && redQuantity===0 && greenQuantity===0)? 'white' : colorTextGray,
-    gradientCenterColor: '#006DFF',
+    gradientCenterColor: brand.bluePrimary,
     focused: true,
   },
-  {value: blueQuantity-greenQuantity, color: colorBlue, gradientCenterColor: '#3BE9DE'},//синие
-  {value: greenQuantity, color: '#16a34a', gradientCenterColor: '#8F80F3'},//динамика
-  {value: redQuantity, color: colorRed, gradientCenterColor: '#FF7F97'},//отставание
+  {value: blueQuantity-greenQuantity, color: colorBlue, gradientCenterColor: brand.tealLight},//синие
+  {value: greenQuantity, color: brand.green, gradientCenterColor: brand.teal},//динамика
+  {value: redQuantity, color: colorRed, gradientCenterColor: brand.redLight},//отставание
   
 ];
 
@@ -75,12 +76,12 @@ const renderLegendComponent = () => {
           justifyContent: 'center',
         }}>
         <View style={{flexDirection: 'row', alignItems: 'center',height: 20, width: '50%'}}>
-         {/* {renderDot('#006DFF')}*/}
+         {/* {renderDot(brand.bluePrimary)}*/}
           <Text style={{color: colorTextGray, fontSize: ts(16.7), alignSelf: 'flex-end'}}>{totalQuantity-blueQuantity} </Text>{/** здесь над подставить вычисленную разницу */}
           <Text style={{ fontSize: ts(9.3), alignSelf: 'flex-end', color: colorText}}>осталось</Text>
         </View>
         <View style={{flexDirection: 'row', alignItems: 'center',  height: 20, width: '50%'}}>
-           {/* {renderDot('#8F80F3')}*/}
+           {/* {renderDot(brand.teal)}*/}
           <Text style={{color: colorSkyBlueText, fontSize: ts(16.7), alignSelf: 'flex-end'}}>{submitted} </Text>{/** здесь над подставить вычисленную сумму green+blue */}
           <Text style={{ fontSize: ts(9.3), alignSelf: 'flex-end', color: colorText}}>проведены</Text>
         </View>
@@ -156,13 +157,13 @@ const renderLegendComponent = () => {
                   <View style={{flexDirection: 'row', height: 24, marginBottom: -5.5,}}>
                     <View style={{ alignSelf: 'flex-end', marginRight: -5  }}>
                     <Image 
-                      style={{ width: 24, height: 24, tintColor: '#16a34a', alignItems: 'flex-end' }}
+                      style={{ width: 24, height: 24, tintColor: brand.green, alignItems: 'flex-end' }}
                       source={require('../assets/images/arm.svg')} 
                     />
                     </View>
                     <View style={{ alignSelf: 'flex-start', height: 16}}>
                       <Text
-                        style={{fontSize: ts(13.3), color: '#16a34a', fontWeight: '500' }}>
+                        style={{fontSize: ts(13.3), color: brand.green, fontWeight: '500' }}>
                         {greenQuantity}
                       </Text>
                     </View>

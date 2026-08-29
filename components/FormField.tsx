@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { useColorGray, useColorText } from "@/hooks/useColorText";
 import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, TextInput, useWindowDimensions, View } from "react-native";
@@ -39,8 +40,8 @@ const FormField = ({ title, post, editable=true, width, onChange}: Props ) => {
             </View> : ''
             }
             <View style = {{}}>
-                <TextInput  style={{fontSize: ts(14), backgroundColor: '#FFFFFF', borderRadius: 8, borderWidth: 1, borderColor: colorGray, height: 42, paddingVertical: 'auto', color: colorGray, textAlign: 'center', marginBottom: 20}}
-                    placeholderTextColor="#111"
+                <TextInput  style={{fontSize: ts(14), backgroundColor: brand.white, borderRadius: 8, borderWidth: 1, borderColor: colorGray, height: 42, paddingVertical: 'auto', color: colorGray, textAlign: 'center', marginBottom: 20}}
+                    placeholderTextColor={brand.textPrimary}
                     onChangeText={setValue}
                     value={value}
                     editable={editable}
@@ -54,32 +55,32 @@ export default FormField
 
 const styles = StyleSheet.create({
     object1: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: brand.white,
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: '#D9D9D9',
+        borderColor: brand.bgBlue,
         width: 123,
         height: 40,
         paddingTop: 12,
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 12,
-        color: '#B3B3B3',
+        color: brand.bgBlue,
         textAlign: 'center',
         marginBottom: 20
     },
     object2: {
-        backgroundColor: '#FFFFFF',
+        backgroundColor: brand.white,
         borderRadius: 8,
         borderWidth: 1,
-        borderColor: '#D9D9D9',
+        borderColor: brand.bgBlue,
         width: 272,
         height: 40,
         paddingTop: 12,
         paddingLeft: 16,
         paddingRight: 16,
         paddingBottom: 12,
-        color: '#B3B3B3',
+        color: brand.bgBlue,
         textAlign: 'center',
         marginBottom: 20,
     }

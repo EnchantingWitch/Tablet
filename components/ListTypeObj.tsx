@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import React, { useState } from 'react';
 import { StyleSheet, useWindowDimensions, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
@@ -83,7 +84,7 @@ export const styles = StyleSheet.create({
     },
     dropdown: {
         height: 42,
-        borderColor: '#D9D9D9',
+        borderColor: brand.bgBlue,
         borderWidth: 1,
         borderRadius: 8,
         paddingHorizontal: 8,
@@ -106,12 +107,12 @@ export const styles = StyleSheet.create({
     placeholderStyle: {
        // fontSize: 16,
        textAlign: 'center',
-       color: '#B3B3B3',
+       color: brand.bgBlue,
     },
     selectedTextStyle: {
         //fontSize: 16,
         textAlign: 'center',
-        color: '#B3B3B3',
+        color: brand.bgBlue,
     },
     iconStyle: {
         width: 20,

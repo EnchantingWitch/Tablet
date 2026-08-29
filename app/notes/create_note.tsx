@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import DateInputWithPicker2 from '@/components/Calendar+';
 import DateInputWithPicker from '@/components/CalendarOnWrite';
 import CustomButton from '@/components/CustomButton';
@@ -566,11 +567,11 @@ console.log(JSON.stringify({
            {/*}   <View style={{flexDirection: 'row', width: '96%', alignSelf: 'center' }}>
         
             <View style={{width: '20%'}}>
-              <Text style={{ fontSize: ts(14), color: '#1E1E1E', fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>№ АИИ</Text>
+              <Text style={{ fontSize: ts(14), color: brand.textPrimary, fontWeight: '400', marginBottom: 8, textAlign: 'center' }}>№ АИИ</Text>
               <TextInput
                 style={[styles.input, {alignContent: 'center'}]}
                 //placeholder="№ акта ИИ"
-                placeholderTextColor="#111"
+                placeholderTextColor={brand.textPrimary}
                 value={numberII}
                 editable={false}
               />
@@ -628,7 +629,7 @@ console.log(JSON.stringify({
             ]}
             //placeholder="Содержание замечания"
             maxLength={250}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             onChangeText={setDescription}
             value={description}
           />
@@ -641,7 +642,7 @@ console.log(JSON.stringify({
                       </Text>
                     : '' }
           {/* <Link href='/notes/add_photo' asChild>
-            <Text style={{ marginBottom: 20, color: '#0000CD' }}>Фото</Text>
+            <Text style={{ marginBottom: 20, color: brand.blueMid }}>Фото</Text>
           </Link>
           <TouchableOpacity>
             {form.video ? (
@@ -654,11 +655,11 @@ console.log(JSON.stringify({
             ) : null}
           </TouchableOpacity>*/}
 
-         {/*} <Text style={{ fontSize: ts(14), color: '#1E1E1E', fontWeight: '400', marginBottom: 8 }}>Исполнитель</Text>
+         {/*} <Text style={{ fontSize: ts(14), color: brand.textPrimary, fontWeight: '400', marginBottom: 8 }}>Исполнитель</Text>
           <TextInput
             style={styles.input}
             //placeholder="Исполнитель"
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             onChangeText={setExecut}
             value={execut}
             editable={false}
@@ -773,7 +774,7 @@ console.log(JSON.stringify({
           <TextInput
             style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray}]}
             // placeholder="Комментарий"
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             onChangeText={setComExp}
             value={comExp} 
             />
@@ -797,17 +798,17 @@ console.log(JSON.stringify({
 export const styles = StyleSheet.create({
  container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
   },
   input: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#D9D9D9',
+    borderColor: brand.bgBlue,
     width: '96%',
     height: 42,
     paddingVertical: 'auto',
-    color: '#B3B3B3',
+    color: brand.bgBlue,
     textAlign: 'center',
     marginBottom: 20,
   },

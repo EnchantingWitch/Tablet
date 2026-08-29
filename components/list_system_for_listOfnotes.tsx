@@ -1,3 +1,5 @@
+import { fontFamily } from '@/constants/Fonts';
+import { brand } from '@/constants/Colors';
 import React, { useState } from 'react';
 import { StyleSheet, Text, useWindowDimensions, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
@@ -76,17 +78,17 @@ const styles = StyleSheet.create({
     },
 
     placeholderStyle: {
-        fontFamily: 'Inter',
+        fontFamily,
        // fontSize: 14,
         fontWeight: '400',
-        color: '#334155',
+        color: brand.textPrimary,
         textAlign: 'center',
     },
     selectedTextStyle: {
-        fontFamily: 'Inter',
+        fontFamily,
         //fontSize: 14,
         fontWeight: '400',
-        color: '#334155',
+        color: brand.textPrimary,
         textAlign: 'center',
     },
     iconStyle: {
@@ -94,10 +96,10 @@ const styles = StyleSheet.create({
         height: 20,
     },
     inputSearchStyle: {
-        fontFamily: 'Inter',
+        fontFamily,
         //fontSize: 14,
         fontWeight: '400',
-        color: '#334155',
+        color: brand.textPrimary,
         textAlign: 'center',
     },
 });

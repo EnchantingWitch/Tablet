@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 /*
 import { StyleSheet, View, Text, TextInput, Keyboard, TouchableOpacity, Alert } from "react-native";
 import React, { useState } from "react";
@@ -17,7 +18,7 @@ const Search_Input = ({ initialQuery }) => {
             alignItems: 'center'
         }}>
             <TextInput style={{
-                backgroundColor: '#FFFFFF', borderRadius: 8, borderWidth: 1, borderColor: '#D9D9D9', width: 272, height: 40, paddingTop: 12, paddingLeft: 16, paddingRight: 16, paddingBottom: 12, color: '#B3B3B3', textAlign: 'center', marginBottom: 20
+                backgroundColor: brand.white, borderRadius: 8, borderWidth: 1, borderColor: brand.bgBlue, width: 272, height: 40, paddingTop: 12, paddingLeft: 16, paddingRight: 16, paddingBottom: 12, color: brand.bgBlue, textAlign: 'center', marginBottom: 20
             }}
                 value={query}
                 placeholder={'Поисковое окно'}

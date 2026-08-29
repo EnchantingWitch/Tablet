@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import { router, useLocalSearchParams } from 'expo-router';
 import React, { useEffect, useState } from 'react';
 import { ActivityIndicator, Alert, Modal, Platform, ScrollView, StatusBar, StyleSheet, Text, TextInput, TouchableOpacity, useWindowDimensions, View } from 'react-native';
@@ -542,7 +543,7 @@ const blobToBase64 = (blob) => {
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, color: colorGray, borderColor: colorGray}]}
             //placeholder="№ акта ИИ"
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={serNumber}
             editable={false}
             />
@@ -551,7 +552,7 @@ const blobToBase64 = (blob) => {
             <View style={{width: '20%', alignItems: 'flex-end'}}>
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, color: colorGray, borderColor: colorGray}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={numberII}
             editable={false}
             />
@@ -560,7 +561,7 @@ const blobToBase64 = (blob) => {
             <View style={{width: '60%', alignItems: 'center'}}>
             <TextInput
             style={[styles.input, {fontSize: ts(14), marginTop: 6, lineHeight: ts(19), color: colorGray, borderColor: colorGray}]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={subObj}
             multiline
             editable={false}
@@ -573,7 +574,7 @@ const blobToBase64 = (blob) => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Система</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), lineHeight: 19, color: colorGray, borderColor: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={systemN}
             multiline
             editable={false}
@@ -581,7 +582,7 @@ const blobToBase64 = (blob) => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Оборудование</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), lineHeight: 19, color: colorGray, borderColor: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={equipment}
             multiline
             editable={false}
@@ -590,7 +591,7 @@ const blobToBase64 = (blob) => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Дефект</Text>
           <TextInput
             /*style={[styles.input,  {flex: 1, height: Math.max(42, inputHeight), fontSize: ts(14) }]} // Минимальная высота 42
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             multiline
            // onChangeText={setComment}
             onContentSizeChange={e=>{
@@ -608,7 +609,7 @@ const blobToBase64 = (blob) => {
                            // textAlignVertical: 'top'
                           }
                         ]}
-                         placeholderTextColor="#111"
+                         placeholderTextColor={brand.textPrimary}
                           multiline
             value={comment}
             //editable={false}
@@ -617,7 +618,7 @@ const blobToBase64 = (blob) => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Заводской номер</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={manufacturerNumber}
             editable={false}
           />
@@ -625,7 +626,7 @@ const blobToBase64 = (blob) => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Статус</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={defectiveActStatus}
             editable={false}
           />
@@ -633,7 +634,7 @@ const blobToBase64 = (blob) => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: '400', marginBottom: 8 }}>Изготовитель</Text>
           <TextInput
             style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={manufacturer}
             editable={false}
           />
@@ -652,7 +653,7 @@ const blobToBase64 = (blob) => {
               <View style={{width: '49%', justifyContent: 'center'}}>
                 <TextInput
                   style={[styles.input, {fontSize: ts(14), width: '100%', marginTop: 6, color: colorGray, borderColor: colorGray }]}
-                  placeholderTextColor="#111"
+                  placeholderTextColor={brand.textPrimary}
                   value={startD}
                   editable={false}
                 />
@@ -661,7 +662,7 @@ const blobToBase64 = (blob) => {
               <View style={{width: '49%', flexDirection: 'row', justifyContent: 'flex-end'}}>
               <TextInput
                   style={[styles.input, {fontSize: ts(14), width: '100%', marginTop: 6, alignContent: 'flex-end', color: colorGray, borderColor: colorGray}]}
-                  placeholderTextColor="#111"
+                  placeholderTextColor={brand.textPrimary}
                   value={planD}
                   editable={false}
                 />
@@ -765,7 +766,7 @@ const blobToBase64 = (blob) => {
           <Text style={{ fontSize: ts(14), color: colorText, fontWeight: 400, marginBottom: 8 }}>Комментарий</Text>
           <TextInput
              style={[styles.input, {fontSize: ts(14), color: colorGray, borderColor: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             value={explanation}
             editable={false}
           />
@@ -882,17 +883,17 @@ const blobToBase64 = (blob) => {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
   },
   input: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#D9D9D9',
+    borderColor: brand.bgBlue,
     width: '96%',
     height: 42,
     paddingVertical: 'auto',
-    color: '#B3B3B3',
+    color: brand.bgBlue,
     textAlign: 'center',
     marginBottom: 20,
   },

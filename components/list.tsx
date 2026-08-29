@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import React, { useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Dropdown } from 'react-native-element-dropdown';
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
         borderRadius: 8,
         paddingHorizontal: 8,
         width: 135,
-        backgroundColor: '#fff',
+        backgroundColor: brand.white,
         alignItems: 'center',
         justifyContent: 'center',
     },

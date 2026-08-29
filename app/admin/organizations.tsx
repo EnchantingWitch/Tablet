@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import CustomButton from '@/components/CustomButton';
 import FloatingScrollToTop from "@/components/FloatingScrollToTop";
 import HeaderForTabs from '@/components/HeaderForTabs';
@@ -160,9 +161,9 @@ const DirectionLayout = () => {
 
           <View style={{paddingTop: 8, justifyContent: 'center', alignItems: 'center', minHeight: Dimensions.get('window').height-BOTTOM_SAFE_AREA-54}}>
           <TextInput 
-            style={{ borderWidth: 1, borderColor: '#D9D9D9', borderRadius: 8,  width: '96%', fontSize: ts(14) }}
+            style={{ borderWidth: 1, borderColor: brand.bgBlue, borderRadius: 8,  width: '96%', fontSize: ts(14) }}
             placeholder="Поиск по организации"
-            placeholderTextColor={'#B2B3B3'}
+            placeholderTextColor={brand.bgBlue}
             value={searchQuery}
             onChangeText={setSearchQuery}
           />

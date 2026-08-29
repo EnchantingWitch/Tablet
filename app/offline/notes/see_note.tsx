@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import DateInputWithPicker2 from '@/components/Calendar+';
 import CalendarWithoutDel from '@/components/CalendarWithoutDel';
 import CustomButton from '@/components/CustomButton';
@@ -509,7 +510,7 @@ const DetailsScreen = () => {
           {/* Индикатор режима */}
           {!isOnline && (
             <View style={styles.offlineIndicator}>
-              <Ionicons name="cloud-offline" size={16} color="#FF9500" />
+              <Ionicons name="cloud-offline" size={16} color={brand.yellow} />
               <Text style={styles.offlineText}>Оффлайн режим</Text>
             </View>
           )}
@@ -522,7 +523,7 @@ const DetailsScreen = () => {
             <Ionicons 
               name={flagFromServer ? "cloud" : "save-outline"} 
               size={16} 
-              color={flagFromServer ? "#007AFF" : "#34C759"} 
+              color={flagFromServer ? brand.bluePrimary : brand.green} 
             />
             <Text style={[
               styles.sourceText,
@@ -537,7 +538,7 @@ const DetailsScreen = () => {
             <Ionicons 
               name={isEditing ? "create-outline" : "eye-outline"} 
               size={14} 
-              color="#8E8E93" 
+              color={brand.gray} 
             />
             <Text style={styles.modeInfoText}>
               {isEditing ? "Режим редактирования" : "Режим просмотра"}
@@ -564,7 +565,7 @@ const DetailsScreen = () => {
                   marginTop: 6, 
                   borderColor:  colorGray, 
                   color:  colorGray,
-                  backgroundColor: '#F9F9F9'
+                  backgroundColor: brand.bgBlueLight
                 }]}
                 value={serNumber}
                 editable={false}
@@ -579,7 +580,7 @@ const DetailsScreen = () => {
                   marginTop: 6, 
                   borderColor: colorGray, 
                   color: colorGray,
-                  backgroundColor: '#F9F9F9'
+                  backgroundColor: brand.bgBlueLight
                 }]}
                 value={numberII}
                 editable={false}
@@ -606,7 +607,7 @@ const DetailsScreen = () => {
                     lineHeight: ts(19), 
                     borderColor: colorGray, 
                     color: colorGray,
-                    backgroundColor: '#F9F9F9'
+                    backgroundColor: brand.bgBlueLight
                   }]}
                   value={subObj}
                   multiline
@@ -634,7 +635,7 @@ const DetailsScreen = () => {
                 lineHeight: 19, 
                 borderColor: colorGray, 
                 color: colorGray,
-                backgroundColor: '#F9F9F9'
+                backgroundColor: brand.bgBlueLight
               }]}
               value={systemN}
               multiline
@@ -651,7 +652,7 @@ const DetailsScreen = () => {
               fontSize: ts(14),
               borderColor:  colorGray,
               color:  colorGray,
-              backgroundColor: isEditing ? '#FFFFFF' : '#F9F9F9',
+              backgroundColor: isEditing ? brand.white : brand.bgBlueLight,
               textAlignVertical: 'top'
             }]}
             multiline
@@ -666,7 +667,7 @@ const DetailsScreen = () => {
               fontSize: ts(14), 
               borderColor: colorGray, 
               color: colorGray,
-              backgroundColor: '#F9F9F9'
+              backgroundColor: brand.bgBlueLight
             }]}
             value={commentStat}
             editable={false}
@@ -678,7 +679,7 @@ const DetailsScreen = () => {
               fontSize: ts(14), 
               borderColor: colorGray, 
               color: colorGray,
-              backgroundColor: '#F9F9F9'
+              backgroundColor: brand.bgBlueLight
             }]}
             value={execut}
             editable={false}
@@ -711,7 +712,7 @@ const DetailsScreen = () => {
                     marginTop: 6, 
                     borderColor: colorGray, 
                     color: colorGray,
-                    backgroundColor: '#F9F9F9'
+                    backgroundColor: brand.bgBlueLight
                   }]}
                   value={startD}
                   editable={false}
@@ -735,7 +736,7 @@ const DetailsScreen = () => {
                     marginTop: 6, 
                     borderColor: colorGray, 
                     color: colorGray,
-                    backgroundColor: '#F9F9F9'
+                    backgroundColor: brand.bgBlueLight
                   }]}
                   value={planD}
                   editable={false}
@@ -761,7 +762,7 @@ const DetailsScreen = () => {
                     marginTop: 6, 
                     borderColor: colorGray, 
                     color: colorGray,
-                    backgroundColor: '#F9F9F9'
+                    backgroundColor: brand.bgBlueLight
                   }]}
                   value={category}
                   editable={false}
@@ -776,7 +777,7 @@ const DetailsScreen = () => {
               fontSize: ts(14), 
               borderColor: colorGray, 
               color: colorGray,
-              backgroundColor: isEditing ? '#FFFFFF' : '#F9F9F9',
+              backgroundColor: isEditing ? brand.white : brand.bgBlueLight,
               textAlignVertical: 'top', alignSelf: 'center'
             }]}
             value={explanation}
@@ -807,7 +808,7 @@ const DetailsScreen = () => {
           {/* Для серверных записей - только просмотр, кнопок нет */}
           {flagFromServer && (
             <View style={styles.viewOnlyMessage}>
-              <Ionicons name="information-circle-outline" size={20} color="#8E8E93" />
+              <Ionicons name="information-circle-outline" size={20} color={brand.gray} />
               <Text style={styles.viewOnlyText}>
                 Это замечание загружено с сервера. Для редактирования перейдите в онлайн-режим.
               </Text>
@@ -828,24 +829,24 @@ const DetailsScreen = () => {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
   },
   input: {
-    backgroundColor: '#F9F9F9',
+    backgroundColor: brand.bgBlueLight,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#D9D9D9',
+    borderColor: brand.bgBlue,
     width: '96%',
     height: 42,
     paddingVertical: 'auto',
-    color: '#B3B3B3',
+    color: brand.bgBlue,
     textAlign: 'center',
     marginBottom: 20,
   },
   offlineIndicator: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#FFF4E5',
+    backgroundColor: brand.yellowPale,
     padding: 10,
     borderRadius: 8,
     marginBottom: 12,
@@ -862,14 +863,14 @@ export const styles = StyleSheet.create({
     width: '96%',
   },
   serverIndicator: {
-    backgroundColor: '#F0F8FF',
+    backgroundColor: brand.bgBlueLight,
   },
   localIndicator: {
-    backgroundColor: '#F0FFF4',
+    backgroundColor: brand.bgGreen,
   },
   offlineText: {
     fontSize: 14,
-    color: '#FF9500',
+    color: brand.yellow,
     fontWeight: '500',
   },
   sourceText: {
@@ -877,15 +878,15 @@ export const styles = StyleSheet.create({
     fontWeight: '500',
   },
   serverText: {
-    color: '#007AFF',
+    color: brand.bluePrimary,
   },
   localText: {
-    color: '#34C759',
+    color: brand.green,
   },
   modeInfo: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F2F2F7',
+    backgroundColor: brand.bgBlueLight,
     padding: 8,
     borderRadius: 6,
     marginBottom: 12,
@@ -894,7 +895,7 @@ export const styles = StyleSheet.create({
   },
   modeInfoText: {
     fontSize: 12,
-    color: '#8E8E93',
+    color: brand.gray,
     fontWeight: '400',
   },
   actionButtons: {
@@ -903,15 +904,15 @@ export const styles = StyleSheet.create({
     marginBottom: 20,
   },
   saveButton: {
-    backgroundColor: '#34C759',
+    backgroundColor: brand.green,
   },
   deleteButton: {
-    backgroundColor: '#FF3B30',
+    backgroundColor: brand.red,
   },
   viewOnlyMessage: {
     flexDirection: 'row',
     alignItems: 'flex-start',
-    backgroundColor: '#F2F2F7',
+    backgroundColor: brand.bgBlueLight,
     padding: 12,
     borderRadius: 8,
     marginTop: 20,
@@ -922,7 +923,7 @@ export const styles = StyleSheet.create({
   viewOnlyText: {
     flex: 1,
     fontSize: 12,
-    color: '#8E8E93',
+    color: brand.gray,
     lineHeight: 16,
   },
 });

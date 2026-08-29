@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import DateInputWithPicker2 from '@/components/Calendar+';
 import DateInputWithPicker from '@/components/CalendarOnWrite';
 import CustomButton from '@/components/CustomButton';
@@ -672,7 +673,7 @@ export default function CreateDefact() {
         {/* Индикатор режима */}
         {isOffline && (
           <View style={styles.offlineIndicator}>
-            <Ionicons name="save-outline" size={16} color="#34C759" />
+            <Ionicons name="save-outline" size={16} color={brand.green} />
             <Text style={styles.offlineText}>Сохранение в локальную базу</Text>
           </View>
         )}
@@ -706,7 +707,7 @@ export default function CreateDefact() {
         </Text>
         <TextInput
           style={[styles.input, { fontSize: ts(14), color: colorGray, borderColor: colorGray }]}
-          placeholderTextColor="#111"
+          placeholderTextColor={brand.textPrimary}
           onChangeText={setEquipment}
           value={equipment} 
         />
@@ -729,7 +730,7 @@ export default function CreateDefact() {
             if (inputH > 120) inputH = 100;
             setInputHeight(inputH);
           }}
-          placeholderTextColor="#111"
+          placeholderTextColor={brand.textPrimary}
           onChangeText={setDescription}
           value={description}
         />          
@@ -747,7 +748,7 @@ export default function CreateDefact() {
         </Text>
         <TextInput
           style={[styles.input, { fontSize: ts(14), color: colorGray, borderColor: colorGray }]}
-          placeholderTextColor="#111"
+          placeholderTextColor={brand.textPrimary}
           onChangeText={setManufacturerNumber}
           value={manufacturerNumber} 
         />
@@ -772,7 +773,7 @@ export default function CreateDefact() {
           // Если организаций нет в базе, показываем обычное текстовое поле
           <TextInput
             style={[styles.input, { fontSize: ts(14), color: colorGray, borderColor: colorGray }]}
-            placeholderTextColor="#111"
+            placeholderTextColor={brand.textPrimary}
             placeholder="Введите изготовителя вручную"
             onChangeText={setManufacturer}
             value={manufacturer} 
@@ -803,7 +804,7 @@ export default function CreateDefact() {
         </Text>
         <TextInput
           style={[styles.input, { fontSize: ts(14), color: colorGray, borderColor: colorGray }]}
-          placeholderTextColor="#111"
+          placeholderTextColor={brand.textPrimary}
           onChangeText={setComExp}
           value={comExp} 
         />
@@ -823,17 +824,17 @@ export default function CreateDefact() {
 export const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
   },
   input: {
-    backgroundColor: '#FFFFFF',
+    backgroundColor: brand.white,
     borderRadius: 8,
     borderWidth: 1,
-    borderColor: '#D9D9D9',
+    borderColor: brand.bgBlue,
     width: '96%',
     height: 42,
     paddingVertical: 'auto',
-    color: '#B3B3B3',
+    color: brand.bgBlue,
     textAlign: 'center',
     marginBottom: 20,
   },
@@ -862,7 +863,7 @@ export const styles = StyleSheet.create({
   offlineIndicator: {
     flexDirection: 'row',
     alignItems: 'center',
-    backgroundColor: '#F0FFF4',
+    backgroundColor: brand.bgGreen,
     padding: 10,
     borderRadius: 8,
     marginBottom: 12,
@@ -871,7 +872,7 @@ export const styles = StyleSheet.create({
   },
   offlineText: {
     fontSize: 14,
-    color: '#34C759',
+    color: brand.green,
     fontWeight: '500',
   },
 });

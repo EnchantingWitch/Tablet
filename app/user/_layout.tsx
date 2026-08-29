@@ -1,3 +1,5 @@
+import { fontFamily } from '@/constants/Fonts';
+import { brand } from '@/constants/Colors';
 import { useClientOnlyValue } from '@/components/useClientOnlyValue';
 import { useColorScheme } from '@/components/useColorScheme';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
@@ -39,11 +41,12 @@ export default function TabLayout() {
           //  headerTitleStyle: {fontSize: ts(20)},
     
           headerTitleAlign: 'center',
-          headerTintColor: '#1E1E1E',
+          headerTintColor: brand.textPrimary,
           headerShadowVisible: false,
          
-        headerStyle: { backgroundColor: '#FFFFFF',  },
+        headerStyle: { backgroundColor: brand.white,  },
         headerTitleStyle: {
+          fontFamily,
           fontSize: ts(20), // Укажите нужный размер шрифта
           //fontWeight: 'bold', // Опционально: можно добавить жирность
           // Другие стили для заголовка, если нужно

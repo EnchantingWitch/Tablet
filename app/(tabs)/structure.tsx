@@ -1,3 +1,4 @@
+import { brand } from '@/constants/Colors';
 import CustomButton from '@/components/CustomButton';
 import FloatingScrollToTop from "@/components/FloatingScrollToTop";
 import MonoSizeText from '@/components/FontSize';
@@ -286,8 +287,8 @@ const initializeData = async () => {
           {(section.status =='Проведены ИИ') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: colorBlue, borderRadius: 8}}>
           <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>ИИ</Text></View>): ''} 
           {(section.status =='Акт ИИ на подписи') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: 'white', borderRadius: 8}}>
-          <Text style={{ fontSize: ts(14), color: '#16a34a', textAlign: 'center'  }}>ИИ</Text></View>): ''} 
-          {(section.status =='Акт ИИ подписан') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: '#16a34a', borderRadius: 8}}>
+          <Text style={{ fontSize: ts(14), color: brand.green, textAlign: 'center'  }}>ИИ</Text></View>): ''} 
+          {(section.status =='Акт ИИ подписан') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: brand.green, borderRadius: 8}}>
           <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>ИИ</Text></View>): ''} 
 
           {(section.status =='Проводится КО') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: 'white', borderRadius: 8}}>
@@ -295,8 +296,8 @@ const initializeData = async () => {
           {(section.status =='Проведено КО') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: colorBlue, borderRadius: 8}}>
           <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>КО</Text></View>): ''}
           {(section.status =='Акт КО на подписи') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: 'white', borderRadius: 8}}>
-          <Text style={{ fontSize: ts(14), color: '#16a34a', textAlign: 'center'  }}>КО</Text></View>): ''}
-          {(section.status =='Акт КО подписан') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: '#16a34a', borderRadius: 8}}>
+          <Text style={{ fontSize: ts(14), color: brand.green, textAlign: 'center'  }}>КО</Text></View>): ''}
+          {(section.status =='Акт КО подписан') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: brand.green, borderRadius: 8}}>
           <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>КО</Text></View>): ''}
         </View>
       </View>
@@ -357,8 +358,8 @@ const initializeData = async () => {
         {(item.status =='Проведены ИИ') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: colorBlue, borderRadius: 8}}>
         <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>ИИ</Text></View>): ''} 
         {(item.status =='Акт ИИ на подписи') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: 'white', borderRadius: 8}}>
-        <Text style={{ fontSize: ts(14), color: '#16a34a', textAlign: 'center'  }}>ИИ</Text></View>): ''} 
-        {(item.status =='Акт ИИ подписан') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: '#16a34a', borderRadius: 8}}>
+        <Text style={{ fontSize: ts(14), color: brand.green, textAlign: 'center'  }}>ИИ</Text></View>): ''} 
+        {(item.status =='Акт ИИ подписан') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: brand.green, borderRadius: 8}}>
         <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>ИИ</Text></View>): ''} 
 
         {(item.status =='Проводится КО') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: 'white', borderRadius: 8}}>
@@ -366,8 +367,8 @@ const initializeData = async () => {
         {(item.status =='Проведено КО') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: colorBlue, borderRadius: 8}}>
         <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>КО</Text></View>): ''}
         {(item.status =='Акт КО на подписи') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: 'white', borderRadius: 8}}>
-        <Text style={{ fontSize: ts(14), color: '#16a34a', textAlign: 'center'  }}>КО</Text></View>): ''}
-        {(item.status =='Акт КО подписан') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: '#16a34a', borderRadius: 8}}>
+        <Text style={{ fontSize: ts(14), color: brand.green, textAlign: 'center'  }}>КО</Text></View>): ''}
+        {(item.status =='Акт КО подписан') ? ( <View style={{width: '92%', height: '25', justifyContent: 'center', backgroundColor: brand.green, borderRadius: 8}}>
         <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>КО</Text></View>): ''}
         </View>
     </View>
@@ -452,8 +453,8 @@ const initializeData = async () => {
                   <View style={{width: '80%', height: '25', justifyContent: 'center', backgroundColor: colorBlue, borderRadius: 8, marginBottom: 5}}>
                     <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>ИИ</Text></View>
                   <View style={{width: '80%', height: '25', justifyContent: 'center', backgroundColor: 'white', borderRadius: 8, marginBottom: 5}}>
-                    <Text style={{ fontSize: ts(14), color: '#16a34a', textAlign: 'center'  }}>ИИ</Text></View>
-                  <View style={{width: '80%', height: '25', justifyContent: 'center', backgroundColor: '#16a34a', borderRadius: 8, marginBottom: 5}}>
+                    <Text style={{ fontSize: ts(14), color: brand.green, textAlign: 'center'  }}>ИИ</Text></View>
+                  <View style={{width: '80%', height: '25', justifyContent: 'center', backgroundColor: brand.green, borderRadius: 8, marginBottom: 5}}>
                     <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>ИИ</Text></View> 
 
                   <View style={{width: '80%', height: '25', justifyContent: 'center', backgroundColor: 'white', borderRadius: 8, marginBottom: 5}}>
@@ -461,8 +462,8 @@ const initializeData = async () => {
                   <View style={{width: '80%', height: '25', justifyContent: 'center', backgroundColor: colorBlue, borderRadius: 8, marginBottom: 5}}>
                     <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>КО</Text></View>
                   <View style={{width: '80%', height: '25', justifyContent: 'center', backgroundColor: 'white', borderRadius: 8, marginBottom: 5}}>
-                    <Text style={{ fontSize: ts(14), color: '#16a34a', textAlign: 'center'  }}>КО</Text></View>
-                  <View style={{width: '80%', height: '25', justifyContent: 'center', backgroundColor: '#16a34a', borderRadius: 8, marginBottom: 5}}>
+                    <Text style={{ fontSize: ts(14), color: brand.green, textAlign: 'center'  }}>КО</Text></View>
+                  <View style={{width: '80%', height: '25', justifyContent: 'center', backgroundColor: brand.green, borderRadius: 8, marginBottom: 5}}>
                     <Text style={{ fontSize: ts(14), color: 'white', textAlign: 'center'  }}>КО</Text></View>
                   </View>  
 
@@ -522,7 +523,7 @@ const styles = StyleSheet.create({
   },
   sectionHeader: {
     flexDirection: 'row',
-    backgroundColor: '#E0F2FE',
+    backgroundColor: brand.bgBlueLight,
     width: '96%',
     height: 37,
     marginBottom: '3%',
